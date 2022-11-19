@@ -3,8 +3,12 @@ const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-js");
 const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
+
+  // Render support https://www.11ty.dev/docs/plugins/render/
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
