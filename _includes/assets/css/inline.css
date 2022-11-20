@@ -1,37 +1,103 @@
+/*CSS RESET*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+	box-sizing: border-box;
+  }
+  /*
+	2. Remove default margin
+  */
+  * {
+	margin: 0;
+  }
+  /*
+	3. Allow percentage-based heights in the application
+  */
+  html, body {
+	height: 100%;
+  }
+  /*
+	Typographic tweaks!
+	4. Add accessible line-height
+	5. Improve text rendering
+  */
+  body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+  }
+  /*
+	6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+  }
+  /*
+	7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+	font: inherit;
+  }
+  /*
+	8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+  }
+  /*
+	9. Create a root stacking context
+  */
+  #root, #__next {
+	isolation: isolate;
+  }
+  /* END CSS RESET */
+
+  /* COLOR VARS */
 :root {
 	--primary: blue;
 	--secondary: white;
 	--background: #FFF0EB;
 }
+/* END COLOR VARS */
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
+/* CUSTOM FONTS */
+/**
+ * @license
+ * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: HelveticaLTWXX-Roman by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/helvetica/pro-regular/
+ * Copyright: Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+ * 
+ * 
+ * 
+ * © 2020 MyFonts Incn*/  
+ @font-face {
+	font-family: "SKGoldilocksItalic";
+	src: url('/static/webFonts/SKGoldilocksItalic/font.woff2') format('woff2'), url('/static/webFonts/SKGoldilocksItalic/font.woff') format('woff');
+  }
+  @font-face {
+	font-family: "SKGoldilocksRegular";
+	src: url('/static/webFonts/SKGoldilocksRegular/font.woff2') format('woff2'), url('/static/webFonts/SKGoldilocksRegular/font.woff') format('woff');
+  }
+  @font-face {
+	font-family: "SKGoldilocksBold";
+	src: url('/static/webFonts/SKGoldilocksBold/font.woff2') format('woff2'), url('/static/webFonts/SKGoldilocksBold/font.woff') format('woff');
+  }
+  @font-face {
+	font-family: "SKGoldilocksBoldItalic";
+	src: url('/static/webFonts/SKGoldilocksBoldItalic/font.woff2') format('woff2'), url('/static/webFonts/SKGoldilocksBoldItalic/font.woff') format('woff');
+  }
+/* END CUSTOM FONTS */
 
-html,
-body {
-	padding: 0;
-	margin: 0;
-	font-family: "Avenir", "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-}
-
-body {
-	display: grid;
-	height: 100vh;
-	grid-template-rows: auto 1fr auto;
-	background-color: var(--background);
-}
-
-main {
-	max-width: 37.5em;
-}
-
-p,
-pre,
-code {
-	line-height: 1.5;
-}
-
+/* GENERIC STYLING */
 a[href],
 a[href]:visited {
 	color: var(--primary);
@@ -41,53 +107,17 @@ a[href]:not(:hover) {
 	text-decoration: none;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
+body {
+	font-family: "SKGoldilocksRegular";
 }
 
-header,
-main,
-footer {
-	padding: 1em;
-}
-
-main {
-	padding-bottom: 2em;
-}
-
-main :first-child,
-main > article :first-child {
-	margin-top: 0;
-}
-
-pre {
-	font-size: 14px;
-	direction: ltr;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	-moz-tab-size: 2;
-	tab-size: 2;
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-	padding: 1em;
-	margin: .5em 0;
-}
-
-/* Header Logo (style as h2) */
-header > em {
-	display: block;
-	font-size: 2em;
-	margin: .67em 0;
-	font-weight: bold;
-	font-style: normal;
-}
-
+/* NAV STYLE */
 /* Header Nav */
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+
 header nav ul {
 	padding: 0;
 	list-style: none;
@@ -113,84 +143,4 @@ header nav li a[href]:not(:hover) {
 
 header nav li a[data-current="current item"] {
 	background-color: white;
-}
-
-/* Posts List */
-article {
-	margin-bottom: 1em;
-	padding-bottom: 1em;
-	border-bottom: 1px solid #eee;
-	border-bottom: 1px solid var(--secondary);
-}
-
-main > section > article > * {
-	margin-top: 0;
-	margin-bottom: .5em;
-}
-
-/* Post Tags */
-a[rel="tag"],
-a[rel="tag"]:visited {
-	display: inline-block;
-  vertical-align: text-top;
-  text-transform: uppercase;
-	letter-spacing: .1em;
-  font-size: .625em;
-  padding: 0 .5em;
-	line-height: 2em;
-	height: 2em;
-  border: 1px solid var(--secondary);
-	background-color: var(--secondary);
-	color: var(--primary);
-  border-radius: .25em;
-  text-decoration: none;
-	margin: 0 .5em .5em 0;
-}
-
-a[rel="tag"]:hover {
-	border: 1px solid var(--primary);
-	background-color: var(--primary);
-	color: var(--secondary);
-}
-
-a[rel="tag"]:last-child {
-	margin-right: 0;
-}
-
-/* Contact Form */
-form {
-  display: grid;
-	padding: 2em 0;
-}
-
-form label {
-  display: none;
-}
-
-input,
-textarea,
-button {
-  width: 100%;
-  padding: 1em;
-  margin-bottom: 1em;
-	font-size: 1rem;
-	font-family: "Avenir", "Avenir Next", sans-serif;
-}
-
-input,
-textarea {
-	border: 1px solid black;
-}
-
-button {
-	border: 1px solid var(--primary);
-	background-color: var(--primary);
-	color: var(--secondary);
-	cursor: pointer;
-}
-
-@media screen and (min-width:768px) {
-	:root {
-		font-size: 1.1rem;
-	}
 }
