@@ -128,7 +128,8 @@ header {
     position: fixed;
     right: 10px;
     top: 10px;
-	padding: 20px 20px
+	padding: 20px 20px;
+	z-index: 1000;
 }
 
 header nav ul {
