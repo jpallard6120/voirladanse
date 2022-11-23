@@ -15,12 +15,17 @@ media_folder: "static/img" # Media files will be stored in the repo under images
 
 collections:
   # Our schedules e.g. About
-  - name: "schedules"
-    label: "Schedule"
-    folder: "schedules"
-    create: true # Change to true to allow editors to create new pages
+  - name: "show_availability"
+    label: "Disponibilité des Spectacles"
+    folder: "show_availability"
+    create: false # Change to true to allow editors to create new pages
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Content", name: "body", widget: "markdown" }
-      - { label: "Available", name: "available", widget: "boolean" }
+      - { label: "Tangente - Never Not Moving aka dr*gs", name: "tangente_never_not", widget: "boolean" }
+      - { label: "Agora - Les jolies choses", name: "agora_jolies_choses", widget: "boolean" }
+      - { label: "Danse Danse - Colossus", name: "danse_danse_colossus", widget: "boolean" }
+      - { label: "Rotonde - Se méfier des eaux qui dorment", name: "rotonde_mefier", widget: "boolean" }
+      - { label: "Tangente - Soirée 100Lux", name: "tangente_100lux", widget: "boolean" }
+      - { label: "Rotonde - Efer", name: "rotonde_efer", widget: "boolean" }
+      - { label: "Danse Danse - Reckless Underdog", name: "reckless", widget: "boolean" }
+      - { label: "Agora - La Goddam Voie Lactée", name: "agora_goddam", widget: "boolean" }
