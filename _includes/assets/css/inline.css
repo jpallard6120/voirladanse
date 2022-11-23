@@ -65,6 +65,7 @@
 	--turquoise: #6EEDD5;
 	--white: #fff;
 	--magenta: #FF1D99;
+	--red: #FF0600;
 }
 /* END COLOR VARS */
 
@@ -80,6 +81,9 @@
 }
 .background-magenta {
 	background-color: var(--magenta);
+}
+.background-red {
+	background-color: var(--red);
 }
 /* END COLORS */
 
@@ -252,6 +256,11 @@ nav li a[data-current="current item"] {
 
 /* HEADING AND PARAGRAPH STYLES */
 
+.ginormous {
+	font-size: 40vh;
+	line-height: .7em;
+}
+
 h1 {
 	font-size: 6.5em;;
 	line-height: 1.1em;
@@ -384,6 +393,10 @@ p {
 
 .w-75 {
 	width: 75%;
+}
+
+.flex-justify-center {
+	justify-content: center;
 }
 
 .flex-align--self-end {
