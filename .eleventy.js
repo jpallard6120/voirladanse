@@ -4,11 +4,15 @@ const UglifyJS = require("uglify-js");
 const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const inspect = require("util").inspect;
+
 
 module.exports = function(eleventyConfig) {
-
   // Render support https://www.11ty.dev/docs/plugins/render/
   eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+  //Debug on steroids
+  eleventyConfig.addFilter("debug", (content) => `<pre>${inspect(content)}</pre>`);
 
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -39,6 +43,9 @@ module.exports = function(eleventyConfig) {
       coll[author].push(post.data);
       return coll;
     }, {});
+  });
+  eleventyConfig.addCollection("show_availability", function(collection) {
+    return collection.getFilteredByGlob("show_availability/*.md");
   });
 
   // Date formatting (human readable)
