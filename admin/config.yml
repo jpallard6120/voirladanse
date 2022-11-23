@@ -20,7 +20,9 @@ collections:
     folder: "show_availability"
     create: true # Change to true to allow editors to create new pages
     slug: "{{slug}}"
+    identifier_field: title
     fields:
+      - { label: "Title", name: "title", widget: "hidden", default: "Boutons" }
       - { label: "Tangente - Never Not Moving aka dr*gs", name: "tangente_never_not", widget: "boolean" }
       - { label: "Agora - Les jolies choses", name: "agora_jolies_choses", widget: "boolean" }
       - { label: "Danse Danse - Colossus", name: "danse_danse_colossus", widget: "boolean" }
