@@ -64,6 +64,7 @@
 	--yellow: #EDFF00;
 	--turquoise: #6EEDD5;
 	--white: #fff;
+	--magenta: #FF1D99;
 }
 /* END COLOR VARS */
 
@@ -76,6 +77,9 @@
 }
 .background-white {
 	background-color: var(--white);
+}
+.background-magenta {
+	background-color: var(--magenta);
 }
 /* END COLORS */
 
@@ -179,6 +183,7 @@ nav li a[data-current="current item"] {
 }
 
 .secondary-button {
+	min-width: 120px;
 	border: 1px solid black;
 	padding: 0.1em 1.5em;
     background-color: rgba(255, 255, 255, 0);
@@ -186,6 +191,7 @@ nav li a[data-current="current item"] {
 }
 
 .unavailable-button {
+	min-width: 120px;
     border: 1px solid rgba(0,0,0,0);
     padding: 0.1em 1.5em;
     background-color: rgba(0,0,0,.1);
@@ -247,7 +253,7 @@ nav li a[data-current="current item"] {
 /* HEADING AND PARAGRAPH STYLES */
 
 h1 {
-	font-size: 8vw;
+	font-size: 6.5em;;
 	line-height: 1.1em;
 	font-weight: 800;
 	letter-spacing: .02em;
@@ -261,13 +267,19 @@ h2 {
 }
 
 h3 {
-	font-size: 2.5vw;
+	font-size: 2.5em;
 	font-weight: 400;
 	display: inline-block;
     padding-left: 10px;
 }
 h4 {
-	font-size: 1.5vw;
+	font-size: 1.5em;
+	font-weight: 400;
+	display: inline-block;
+    padding-left: 10px;
+}
+h5 {
+	font-size: 1.1em;
 	font-weight: 400;
 	display: inline-block;
     padding-left: 10px;
@@ -283,6 +295,7 @@ h4 {
 
 p {
 	padding: 0 10px 0;
+	font-size: 1.1em;
 }
 
 .small {
@@ -303,8 +316,14 @@ p {
 .pr-10 {
 	padding-right: 10px;
 }
+.pr-60 {
+	padding-right: 60px;
+}
 .pb-15 {
 	padding-bottom: 15px;
+}
+.pb-60 {
+	padding-bottom: 60px;
 }
 .pt-30 {
 	padding-top: 30px;
@@ -317,6 +336,9 @@ p {
 }
 .mt-30 {
 	margin-top: 30px;
+}
+.mt-60 {
+	margin-top: 60px;
 }
 .mb-30 {
 	margin-bottom: 30px;
@@ -344,8 +366,8 @@ p {
 	padding-right: 150px;
 }
 
-.pt-22vw {
-	padding-top: 22vw;
+.pt-44vh {
+	padding-top: 44vh;
 }
 
 .ml-10 {
@@ -370,6 +392,10 @@ p {
 
 .flex-align-start {
 	align-items: flex-start;
+}
+
+.flex-align-end {
+	align-items: flex-end;
 }
 
 .flex-align--self-start {
@@ -453,6 +479,21 @@ details > summary {
 	list-style: none;
 }
 
+/* Styling the conditions in the hero row */
+
+.conditions {
+	position: absolute; 
+	bottom: -110px;
+}
+
+@media only screen and (min-width:936px) {
+	.conditions {
+		bottom: -50px;
+	}
+}
+
+
+
 /* TABLE STYLES */
 .showtimes-table div.flex-grow-3 {
 	justify-content: flex-end;
@@ -461,4 +502,24 @@ details > summary {
 
 .showtimes-table div.flex-grow-3 button {
 	align-self: flex-start;
+}
+
+/* Footer styles */
+.footer img,
+.showtimes-table .flex img {
+	display: unset;
+	width: unset;
+	height: unset;
+	object-fit: contain;
+	object-position: unset;
+	padding: 0 10px;
+}
+
+.showtimes-table div {
+	align-items: flex-start;
+}
+
+.footer .col-25 {
+	display: flex;
+	justify-content: flex-start;
 }
