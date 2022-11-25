@@ -137,6 +137,15 @@ a[href]:not(:hover) {
 	text-decoration: none;
 }
 
+.secondary-button:hover a {
+    color: #999;
+	text-decoration: none;
+}
+
+.secondary-button:hover {
+    border: 1px solid #999;
+}
+
 body {
 	font-family: "SKGoldilocksRegular";
 	background-color: #fafafa; /* Just to see elements pop out */
@@ -171,9 +180,14 @@ nav li {
 
 nav li a {
 	padding: .5em 1em;
-	background-color: #fff;
+	background-color: #F6F6F6;
 	border-radius: 20px;
 	margin: 0.25em;
+}
+
+nav ul li a:hover {
+	text-decoration: none;
+	background-color: #D8D8D8;
 }
 
 nav li a[href], nav li a[href]:visited,
@@ -220,6 +234,11 @@ nav li a[data-current="current item"] {
 .hero-row {
 	height: 70vh;
 }
+
+.height-10vh {
+	height: 10vh;
+}
+
 
 .hero-row h3 {
 	line-height: 1.2em;
@@ -281,15 +300,15 @@ nav li a[data-current="current item"] {
 
 h1 {
 	font-family: 'SKGoldilocksMedium';
-	font-size: 8.5em;;
+	font-size: 6.5em;;
     line-height: 1.05em;
 	font-weight: 400;
 	letter-spacing: .02em;
 }
 
-@media screen and (max-width: 905px) {
-	h1 {
-		font-size: 6.5em;
+@media screen and (min-width: 905px) {
+	.hero-row h1 {
+		font-size: 8.5em;
 		letter-spacing: 0em;
 	}
 }
@@ -615,4 +634,34 @@ details > summary {
 
 .footer .col-25 {
 	align-content: flex-start;
+}
+
+.footer .small {
+	padding: 0;
+}
+
+.footer .w-100 {
+	min-height:80px;
+}
+
+.footer .align-content-center {
+	align-content: center;
+}
+
+.footer .align-items-center {
+	align-items: center;
+}
+
+/* MOBILE STYLES */
+
+@media screen and (max-width: 768px) {
+	.nowrap {
+		flex-wrap: wrap !important
+	}
+	.hero-row {
+		height: 90vh;
+	}
+	.mobile-none {
+		display:none;
+	}
 }
