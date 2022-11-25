@@ -314,7 +314,7 @@ h1 {
 }
 
 h2 {
-	font-size: 4vw;
+	font-size: 3.5em;
 	font-weight: 400;
 	display: inline-block;
     padding-left: 10px;
@@ -644,24 +644,132 @@ details > summary {
 	min-height:80px;
 }
 
-.footer .align-content-center {
-	align-content: center;
-}
-
 .footer .align-items-center {
 	align-items: center;
+}
+
+.square {
+	height:100px;
+	width:100px;
+	display: flex;
+    align-items: center;
+}
+
+.square svg,
+.square img {
+	object-fit: contain;
+    width: 100%;
 }
 
 /* MOBILE STYLES */
 
 @media screen and (max-width: 768px) {
+	h1 {
+		font-size: 5em;
+	}
 	.nowrap {
 		flex-wrap: wrap !important
 	}
 	.hero-row {
-		height: 90vh;
+		height: 100vh;
 	}
 	.mobile-none {
 		display:none;
+	}
+	.hero-row > div {
+		flex-basis: 100%;
+	}
+	.hero-row > div:nth-child(2) {
+		padding-bottom: 60px;
+	}
+	.hero-row > div:first-child {
+		order: 1
+	}
+	.hero-row > div:nth-child(2) {
+		order: 3
+	}
+	.hero-row > div:last-child {
+		order: 2
+	}
+	.partners {
+		height: 40vh;
+	}
+	.sticky-title-container {
+		height: 50vh;;
+		position: sticky;
+		top: 0;
+		align-items: center;
+		display: flex
+	}
+	.sticky-title {
+		width: 100%;
+		padding-top: 0;
+	}
+	.pt-44vh {
+		padding-top: 60px;
+	}
+	.col-50 {
+		flex-basis: 100%;
+	}
+	.col-33 {
+		flex-basis: 50%
+	}
+	.sticky {
+		position: relative;
+	}
+	.show-row > div:nth-of-type(1) {
+		order: 1;
+	}
+	.show-row > div:nth-of-type(3) {
+		order: 2;
+	}
+	.show-row > div:nth-of-type(2) {
+		order: 3;
+	}
+	.show-row > div:nth-of-type(5) {
+		order: 4;
+	}
+	.show-row > div:nth-of-type(4) {
+		order: 5;
+	}
+	.mobile-h-100 {
+		height:100%;
+	}
+	.row-text-content div:nth-of-type(1) {
+		flex-basis: 100%;
+	}
+	.row-text-content div:nth-of-type(4) {
+		flex-basis: 100%;
+		justify-content: center;
+		margin-top: 20px;
+	}
+	h5 {
+		font-size: 1.5em;
+		padding: 0 0 10px 0;
+	}
+	.row-text-content button {
+		width: 100%;
+		padding: 3px 10px;;
+	}
+
+	.row-text-content {
+		padding-left: 20px;
+	}
+	.square {
+		height: auto;
+	}
+	.footer .w-100 {
+		min-height: auto;
+	}
+	
+	.footer .col-25 {
+		flex-basis: 100%;
+		padding-top: 25px;
+	}
+	.sticky-footer {
+		position: relative;
+		bottom: auto;
+		height: auto;
+		z-index: auto;
 	}
 }

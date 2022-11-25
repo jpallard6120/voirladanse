@@ -49,7 +49,7 @@ section: page
 {# END HERO ROW #}
 
 {# PARTNERS 4 COL ROW #}
-<div class="row p-0">
+<div class="row p-0 partners">
   <div class="col-25">
     <img src="https://placekitten.com/300/400" alt="I'm an image" width="300" height="400">
   </div>
@@ -66,9 +66,9 @@ section: page
 {# END PARTNERS 4 COL ROW #}
 
 {# FIRST ROW - TURQUOISE #}
-<div class="row p-0 flex-align-start background-turquoise">
-    <div class="absolute h-200vh w-100">
-    <h1 class="pt-30 pr-60 ml-30 w-50 sticky">Agora de la danse</h1>
+<div class="row show-row p-0 flex-align-start background-turquoise">
+    <div class="absolute h-200vh w-100 sticky-title-container">
+    <h1 class="pt-30 pr-60 ml-30 w-50 sticky sticky-title">Agora de la danse</h1>
     </div>
     <div class="col-50 flex pt-44vh">
       <div class="w-100">
@@ -252,61 +252,76 @@ section: page
   </h4>
   
   <div class="showtimes-table ml-40 w-100">
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
-      <div class="flex-grow-2 flex">
+      <div class="mobile-h-100">
         <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
-        <h5>
-          Les jolies choses
-        </h5>
       </div>
-      <div class="flex-grow-1">
-        1er mars 2023<br>
-        2 mars 2023<br>
-        3 mars 2023
-      </div>
-      <div class="flex-grow-1">
-        19h<br>
-        19h<br>
-        19h
-      </div>
-      <div class="flex-grow-3">
-        {% if collections.show_availability[0].data.agora_jolies_choses %}
-        <button class="secondary-button">
-          <a href="#">Sélectionner ce spectacle</a>
-        </button>
-        {% else %}
-        <button class="unavailable-button">
-          Complet
-        </button>
-        {% endif %}
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="flex-grow-2">
+          <h5>
+            Les jolies choses
+          </h5>
+        </div>
+        <div class="flex-grow-1">
+          1er mars 2023<br>
+          2 mars 2023<br>
+          3 mars 2023
+        </div>
+        <div class="flex-grow-1">
+          19h<br>
+          19h<br>
+          19h
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.tangente_never_not %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
       </div>
     </div>
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
-      <div class="flex-grow-2 flex">
+
+      <div class="mobile-h-100">
         <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
-        <h5>
-          Les jolies choses
-        </h5>
       </div>
-      <div class="flex-grow-1">
-        1er mars 2023<br>
-        2 mars 2023<br>
-        3 mars 2023
-      </div>
-      <div class="flex-grow-1">
-        19h<br>
-        19h<br>
-        19h
-      </div>
-      <div class="flex-grow-3">
-        <button class="secondary-button">
-          <a href="#">Sélectionner ce spectacle</a>
-        </button>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="flex-grow-2">
+          <h5>
+            Les jolies choses
+          </h5>
+        </div>
+        <div class="flex-grow-1">
+          1er mars 2023<br>
+          2 mars 2023<br>
+          3 mars 2023
+        </div>
+        <div class="flex-grow-1">
+          19h<br>
+          19h<br>
+          19h
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.agora_jolies_choses %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
       </div>
     </div>
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
     </div>
   </div>
@@ -319,55 +334,76 @@ section: page
   </h4>
   
   <div class="showtimes-table ml-40 w-100">
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
-      <div class="flex-grow-2 flex">
+      <div class="mobile-h-100">
         <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
-        <h5>
-          Les jolies choses
-        </h5>
       </div>
-      <div class="flex-grow-1">
-        1er mars 2023<br>
-        2 mars 2023<br>
-        3 mars 2023
-      </div>
-      <div class="flex-grow-1">
-        19h<br>
-        19h<br>
-        19h
-      </div>
-      <div class="flex-grow-3">
-        <button class="secondary-button">
-          <a href="#">Sélectionner ce spectacle</a>
-        </button>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="flex-grow-2">
+          <h5>
+            Les jolies choses
+          </h5>
+        </div>
+        <div class="flex-grow-1">
+          1er mars 2023<br>
+          2 mars 2023<br>
+          3 mars 2023
+        </div>
+        <div class="flex-grow-1">
+          19h<br>
+          19h<br>
+          19h
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.agora_jolies_choses %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
       </div>
     </div>
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
-      <div class="flex-grow-2 flex">
+
+      <div class="mobile-h-100">
         <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
-        <h5>
-          Les jolies choses
-        </h5>
       </div>
-      <div class="flex-grow-1">
-        1er mars 2023<br>
-        2 mars 2023<br>
-        3 mars 2023
-      </div>
-      <div class="flex-grow-1">
-        19h<br>
-        19h<br>
-        19h
-      </div>
-      <div class="flex-grow-3">
-        <button class="secondary-button">
-          <a href="#">Sélectionner ce spectacle</a>
-        </button>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="flex-grow-2">
+          <h5>
+            Les jolies choses
+          </h5>
+        </div>
+        <div class="flex-grow-1">
+          1er mars 2023<br>
+          2 mars 2023<br>
+          3 mars 2023
+        </div>
+        <div class="flex-grow-1">
+          19h<br>
+          19h<br>
+          19h
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.agora_jolies_choses %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
       </div>
     </div>
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
     </div>
   </div>
@@ -380,55 +416,76 @@ section: page
   </h4>
   
   <div class="showtimes-table ml-40 w-100">
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
-      <div class="flex-grow-2 flex">
+      <div class="mobile-h-100">
         <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
-        <h5>
-          Les jolies choses
-        </h5>
       </div>
-      <div class="flex-grow-1">
-        1er mars 2023<br>
-        2 mars 2023<br>
-        3 mars 2023
-      </div>
-      <div class="flex-grow-1">
-        19h<br>
-        19h<br>
-        19h
-      </div>
-      <div class="flex-grow-3">
-        <button class="secondary-button">
-          <a href="#">Sélectionner ce spectacle</a>
-        </button>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="flex-grow-2">
+          <h5>
+            Les jolies choses
+          </h5>
+        </div>
+        <div class="flex-grow-1">
+          1er mars 2023<br>
+          2 mars 2023<br>
+          3 mars 2023
+        </div>
+        <div class="flex-grow-1">
+          19h<br>
+          19h<br>
+          19h
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.agora_jolies_choses %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
       </div>
     </div>
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
-      <div class="flex-grow-2 flex">
+
+      <div class="mobile-h-100">
         <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
-        <h5>
-          Les jolies choses
-        </h5>
       </div>
-      <div class="flex-grow-1">
-        1er mars 2023<br>
-        2 mars 2023<br>
-        3 mars 2023
-      </div>
-      <div class="flex-grow-1">
-        19h<br>
-        19h<br>
-        19h
-      </div>
-      <div class="flex-grow-3">
-        <button class="secondary-button">
-          <a href="#">Sélectionner ce spectacle</a>
-        </button>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="flex-grow-2">
+          <h5>
+            Les jolies choses
+          </h5>
+        </div>
+        <div class="flex-grow-1">
+          1er mars 2023<br>
+          2 mars 2023<br>
+          3 mars 2023
+        </div>
+        <div class="flex-grow-1">
+          19h<br>
+          19h<br>
+          19h
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.agora_jolies_choses %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
       </div>
     </div>
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
     </div>
   </div>
@@ -441,55 +498,76 @@ section: page
   </h4>
   
   <div class="showtimes-table ml-40 w-100">
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
-      <div class="flex-grow-2 flex">
+      <div class="mobile-h-100">
         <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
-        <h5>
-          Les jolies choses
-        </h5>
       </div>
-      <div class="flex-grow-1">
-        1er mars 2023<br>
-        2 mars 2023<br>
-        3 mars 2023
-      </div>
-      <div class="flex-grow-1">
-        19h<br>
-        19h<br>
-        19h
-      </div>
-      <div class="flex-grow-3">
-        <button class="secondary-button">
-          <a href="#">Sélectionner ce spectacle</a>
-        </button>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="flex-grow-2">
+          <h5>
+            Les jolies choses
+          </h5>
+        </div>
+        <div class="flex-grow-1">
+          1er mars 2023<br>
+          2 mars 2023<br>
+          3 mars 2023
+        </div>
+        <div class="flex-grow-1">
+          19h<br>
+          19h<br>
+          19h
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.agora_jolies_choses %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
       </div>
     </div>
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
-      <div class="flex-grow-2 flex">
+
+      <div class="mobile-h-100">
         <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
-        <h5>
-          Les jolies choses
-        </h5>
       </div>
-      <div class="flex-grow-1">
-        1er mars 2023<br>
-        2 mars 2023<br>
-        3 mars 2023
-      </div>
-      <div class="flex-grow-1">
-        19h<br>
-        19h<br>
-        19h
-      </div>
-      <div class="flex-grow-3">
-        <button class="secondary-button">
-          <a href="#">Sélectionner ce spectacle</a>
-        </button>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="flex-grow-2">
+          <h5>
+            Les jolies choses
+          </h5>
+        </div>
+        <div class="flex-grow-1">
+          1er mars 2023<br>
+          2 mars 2023<br>
+          3 mars 2023
+        </div>
+        <div class="flex-grow-1">
+          19h<br>
+          19h<br>
+          19h
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.agora_jolies_choses %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
       </div>
     </div>
-    <div class="relative w-75 flex pt-30">
+    <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
     </div>
   </div>
@@ -499,98 +577,95 @@ section: page
 {# FOOTER #}
 <div class="row footer sticky-footer pt-30 pb-60 background-magenta">
   <div class=" row w-100">
-    <div class="col-25 align-content-center">
+    <div class="col-25">
       <div class="w-100 flex align-items-center">
-        <svg width="107" height="72" viewBox="0 0 107 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_1346_154)">
-        <path d="M9.84683 29.1134H5.02533L5.40557 28.023H9.40388L7.37728 22.583L9.61164 17.0254H10.8464L16.8125 32.204C17.6945 34.4082 18.7529 35.3221 19.9602 35.526V35.7613H9.61164V35.526C10.7014 35.4397 11.4344 35.0554 11.4344 33.9376C11.4344 33.3218 11.1678 32.4981 10.7563 31.5255L9.84291 29.1134H9.84683ZM0 35.7613V35.526C1.05838 35.3495 1.82276 34.9102 2.58715 34.0866C3.46913 33.1178 3.79056 32.4119 4.29231 31.1764L4.5275 31.294C4.46871 31.5568 4.32367 32.353 4.32367 33.0276C4.32367 34.467 5.11549 35.3495 6.79322 35.526V35.7613H0Z" fill="black"/>
-        <path d="M31.3081 27.6427V27.4074H40.4493V27.6427C38.8892 27.9055 38.3325 28.5252 38.3325 30.6431V34.9967C36.9214 35.4359 33.2171 35.938 31.4257 35.9968V35.734C31.9235 35.7026 32.2488 35.6163 32.6604 35.381C33.1308 35.1457 33.4248 34.7064 33.4248 34.0004V30.647C33.4248 28.5291 32.8643 27.9133 31.3081 27.6466M37.3055 23.3244C36.7175 20.8849 35.13 18.6179 32.7506 17.6491C32.2802 17.4413 31.8098 17.3236 31.312 17.2373V16.9941C33.7227 16.9941 36.1609 17.3197 37.2781 17.7001L37.5721 23.3205H37.3095L37.3055 23.3244ZM30.3398 36.0007C24.1072 35.7379 20.2578 31.502 20.2578 26.47C20.2578 20.9123 25.0519 17.4413 30.1948 16.9981V17.2608C29.8106 17.3197 29.1364 17.5825 28.6974 17.908C27.1686 18.9983 26.024 21.2026 26.024 26.0856C26.024 30.7019 26.7884 34.0553 28.8463 35.2908C29.3442 35.585 29.8459 35.7026 30.3438 35.7615V35.9968L30.3398 36.0007Z" fill="black"/>
-        <path d="M53.0047 16.9941C59.2962 17.2295 63.2043 21.1986 63.2043 26.5249C63.2043 32.3492 58.324 35.4948 53.9141 35.9654V35.7301C54.2669 35.6713 54.9137 35.4673 55.3253 35.0829C56.6777 34.0553 57.4421 31.7609 57.4421 26.8779C57.4421 22.289 56.7365 18.9356 54.5335 17.7001C54.0945 17.4648 53.5026 17.2883 53.0047 17.2295V16.9941ZM52.8597 35.9968C46.5682 35.734 42.6875 31.7923 42.6875 26.4661C42.6875 20.6143 47.5678 17.4648 51.9777 17.0255V17.2608C51.6249 17.3197 50.9507 17.555 50.5352 17.908C49.1828 18.9356 48.4184 21.2026 48.4184 26.0856C48.4184 30.7019 49.1514 34.0279 51.327 35.2908C51.7974 35.5261 52.354 35.7026 52.8558 35.7615V35.9968H52.8597Z" fill="black"/>
-        <path d="M96.1359 29.1134H91.3144L91.6985 28.023H95.6969L93.6663 22.583L95.9007 17.0254H97.1355L103.102 32.204C103.984 34.4082 105.042 35.3221 106.249 35.526V35.7613H95.9007V35.526C96.9904 35.4397 97.7235 35.0554 97.7235 33.9376C97.7235 33.3218 97.4569 32.4981 97.0453 31.5255L96.132 29.1134H96.1359ZM86.2891 35.7613V35.526C87.3474 35.3495 88.1118 34.9102 88.8762 34.0866C89.7582 33.1178 90.0796 32.4119 90.5814 31.1764L90.8166 31.294C90.7578 31.5568 90.6127 32.353 90.6127 33.0276C90.6127 34.467 91.4046 35.3495 93.0823 35.526V35.7613H86.293H86.2891Z" fill="black"/>
-        <path d="M73.0558 32.1139V17.2295H65.4434V17.4648C67.1211 17.7276 67.7639 18.4336 67.7639 20.8771V32.1139C67.7639 34.526 67.1172 35.2595 65.4434 35.5262V35.7615H75.8782V35.5262C74.173 35.2634 73.0558 34.6751 73.0558 32.1139Z" fill="black"/>
-        <path d="M87.7556 35.7615V35.6124C86.7286 35.4634 85.3449 34.3495 84.3766 33.0238C82.9929 31.3765 81.2289 29.2586 79.8491 26.6426V26.5837C81.6719 25.8189 82.9655 24.3207 82.9655 22.2302C82.9655 19.7004 81.4681 18.0531 77.8813 17.4962C76.9993 17.3197 75.4706 17.2334 74.3848 17.2334V17.4687C76.3251 17.7629 77.4737 19.1748 77.4737 22.1164C77.4737 24.1442 77.1483 25.7954 75.5921 26.6151C75.2981 26.7641 75.0629 26.8504 74.7689 26.9406V27.0269C75.6195 29.086 76.6505 31.3805 77.8853 33.0552C78.9985 34.5731 79.9824 35.4595 81.3975 35.7615H87.7595H87.7556Z" fill="black"/>
-        </g>
-        <defs>
-        <clipPath id="clip0_1346_154">
-        <rect width="106.249" height="72" fill="white"/>
-        </clipPath>
-        </defs>
-        </svg>
+        <div class="square">
+          <svg width="107" height="72" viewBox="0 0 107 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1346_154)">
+          <path d="M9.84683 29.1134H5.02533L5.40557 28.023H9.40388L7.37728 22.583L9.61164 17.0254H10.8464L16.8125 32.204C17.6945 34.4082 18.7529 35.3221 19.9602 35.526V35.7613H9.61164V35.526C10.7014 35.4397 11.4344 35.0554 11.4344 33.9376C11.4344 33.3218 11.1678 32.4981 10.7563 31.5255L9.84291 29.1134H9.84683ZM0 35.7613V35.526C1.05838 35.3495 1.82276 34.9102 2.58715 34.0866C3.46913 33.1178 3.79056 32.4119 4.29231 31.1764L4.5275 31.294C4.46871 31.5568 4.32367 32.353 4.32367 33.0276C4.32367 34.467 5.11549 35.3495 6.79322 35.526V35.7613H0Z" fill="black"/>
+          <path d="M31.3081 27.6427V27.4074H40.4493V27.6427C38.8892 27.9055 38.3325 28.5252 38.3325 30.6431V34.9967C36.9214 35.4359 33.2171 35.938 31.4257 35.9968V35.734C31.9235 35.7026 32.2488 35.6163 32.6604 35.381C33.1308 35.1457 33.4248 34.7064 33.4248 34.0004V30.647C33.4248 28.5291 32.8643 27.9133 31.3081 27.6466M37.3055 23.3244C36.7175 20.8849 35.13 18.6179 32.7506 17.6491C32.2802 17.4413 31.8098 17.3236 31.312 17.2373V16.9941C33.7227 16.9941 36.1609 17.3197 37.2781 17.7001L37.5721 23.3205H37.3095L37.3055 23.3244ZM30.3398 36.0007C24.1072 35.7379 20.2578 31.502 20.2578 26.47C20.2578 20.9123 25.0519 17.4413 30.1948 16.9981V17.2608C29.8106 17.3197 29.1364 17.5825 28.6974 17.908C27.1686 18.9983 26.024 21.2026 26.024 26.0856C26.024 30.7019 26.7884 34.0553 28.8463 35.2908C29.3442 35.585 29.8459 35.7026 30.3438 35.7615V35.9968L30.3398 36.0007Z" fill="black"/>
+          <path d="M53.0047 16.9941C59.2962 17.2295 63.2043 21.1986 63.2043 26.5249C63.2043 32.3492 58.324 35.4948 53.9141 35.9654V35.7301C54.2669 35.6713 54.9137 35.4673 55.3253 35.0829C56.6777 34.0553 57.4421 31.7609 57.4421 26.8779C57.4421 22.289 56.7365 18.9356 54.5335 17.7001C54.0945 17.4648 53.5026 17.2883 53.0047 17.2295V16.9941ZM52.8597 35.9968C46.5682 35.734 42.6875 31.7923 42.6875 26.4661C42.6875 20.6143 47.5678 17.4648 51.9777 17.0255V17.2608C51.6249 17.3197 50.9507 17.555 50.5352 17.908C49.1828 18.9356 48.4184 21.2026 48.4184 26.0856C48.4184 30.7019 49.1514 34.0279 51.327 35.2908C51.7974 35.5261 52.354 35.7026 52.8558 35.7615V35.9968H52.8597Z" fill="black"/>
+          <path d="M96.1359 29.1134H91.3144L91.6985 28.023H95.6969L93.6663 22.583L95.9007 17.0254H97.1355L103.102 32.204C103.984 34.4082 105.042 35.3221 106.249 35.526V35.7613H95.9007V35.526C96.9904 35.4397 97.7235 35.0554 97.7235 33.9376C97.7235 33.3218 97.4569 32.4981 97.0453 31.5255L96.132 29.1134H96.1359ZM86.2891 35.7613V35.526C87.3474 35.3495 88.1118 34.9102 88.8762 34.0866C89.7582 33.1178 90.0796 32.4119 90.5814 31.1764L90.8166 31.294C90.7578 31.5568 90.6127 32.353 90.6127 33.0276C90.6127 34.467 91.4046 35.3495 93.0823 35.526V35.7613H86.293H86.2891Z" fill="black"/>
+          <path d="M73.0558 32.1139V17.2295H65.4434V17.4648C67.1211 17.7276 67.7639 18.4336 67.7639 20.8771V32.1139C67.7639 34.526 67.1172 35.2595 65.4434 35.5262V35.7615H75.8782V35.5262C74.173 35.2634 73.0558 34.6751 73.0558 32.1139Z" fill="black"/>
+          <path d="M87.7556 35.7615V35.6124C86.7286 35.4634 85.3449 34.3495 84.3766 33.0238C82.9929 31.3765 81.2289 29.2586 79.8491 26.6426V26.5837C81.6719 25.8189 82.9655 24.3207 82.9655 22.2302C82.9655 19.7004 81.4681 18.0531 77.8813 17.4962C76.9993 17.3197 75.4706 17.2334 74.3848 17.2334V17.4687C76.3251 17.7629 77.4737 19.1748 77.4737 22.1164C77.4737 24.1442 77.1483 25.7954 75.5921 26.6151C75.2981 26.7641 75.0629 26.8504 74.7689 26.9406V27.0269C75.6195 29.086 76.6505 31.3805 77.8853 33.0552C78.9985 34.5731 79.9824 35.4595 81.3975 35.7615H87.7595H87.7556Z" fill="black"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_1346_154">
+          <rect width="106.249" height="72" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+        </div>
       </div>
-    </div>
-    <div class="col-25 align-content-center">
-      <div class="w-100 flex align-items-center">
-        <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
-      </div>
+      <p class="small">
+      Agora de la danse<br>
+      Édifice Wilder - Espace danse<br>
+      1435, rue de Bleury<br>
+      Montréal, QC H3A 2H7<br>
+      <br>
+      514 525-1500
+      </p>
     </div>
     <div class="col-25">
       <div class="w-100 flex align-items-center">
-        <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
+        <div class="square">
+          <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
+        </div>
       </div>
+      <p class="small">
+      Agora de la danse<br>
+      Édifice Wilder - Espace danse<br>
+      1435, rue de Bleury<br>
+      Montréal, QC H3A 2H7<br>
+      <br>
+      514 525-1500
+      </p>
     </div>
-    <div class="col-25 align-content-center">
+    <div class="col-25">
       <div class="w-100 flex align-items-center">
-        <svg width="105" height="24" viewBox="0 0 105 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_1346_165)">
-        <path d="M33.9981 4.71447C32.4073 4.71447 31.0941 5.47063 30.0606 6.96267V3.97656L26.9297 5.94703V17.6462H30.0606V12.57C30.0606 9.3629 31.3474 7.39447 32.9646 7.39447C34.1764 7.39447 34.7824 8.10197 34.7824 9.49062V17.6462H37.9153V8.55404C37.9153 6.05447 36.3488 4.7165 34.0001 4.7165L33.9981 4.71447Z" fill="black"/>
-        <path d="M18.1773 4.71484C15.6279 4.71484 13.7332 6.12782 13.3299 8.25033L15.9805 8.85647C16.3088 7.87326 17.0404 7.39281 18.1773 7.39281C19.6667 7.39281 20.3983 8.02328 20.3983 9.25989V9.81737H18.2786C15.0463 9.81737 12.8496 11.4574 12.8496 13.9833C12.8496 16.5092 14.4647 17.8472 16.7121 17.8472C18.3272 17.8472 19.6404 17.2411 20.6273 16.0288L20.9536 17.6445H23.5313V10.0444C23.5313 6.48259 21.7378 4.71484 18.1773 4.71484ZM20.3983 12.544C20.3983 13.3265 20.0964 13.957 19.4904 14.4374C18.9088 14.9179 18.2259 15.1693 17.4437 15.1693C16.6108 15.1693 16.1305 14.6138 16.1305 13.9326C16.1305 12.8461 16.8621 12.2906 18.3009 12.2906H20.3963V12.544H20.3983Z" fill="black"/>
-        <path d="M13.079 0.822266H0V3.85094H4.89804V17.6462H4.91425L8.18096 15.1081V3.85094H13.079V0.822266Z" fill="black"/>
-        <path d="M47.7092 14.8685H45.1092C44.327 14.8685 43.9237 14.5664 43.9237 13.9339C43.9237 13.5305 44.1243 13.2021 44.5296 12.973C45.1112 13.1494 45.7415 13.2507 46.3717 13.2507C47.7112 13.2507 48.8217 12.8716 49.7053 12.1135C50.5888 11.331 51.0428 10.295 51.0428 9.00775C51.0428 8.24957 50.8665 7.56842 50.5382 6.98661L51.4643 6.49602V3.7998L48.7184 5.26752C47.9868 4.88843 47.2046 4.71206 46.3697 4.71206C45.0322 4.71206 43.9217 5.11547 43.0381 5.89798C42.1546 6.68049 41.6986 7.71641 41.6986 9.00572C41.6986 10.0416 42.0026 10.8992 42.5822 11.631C41.5466 12.2614 41.0177 13.1453 41.0177 14.3089C41.0177 15.0915 41.2447 15.7483 41.6743 16.2774C40.9914 16.9079 40.6367 17.7694 40.6367 18.8033C40.6367 20.1413 41.1677 21.1772 42.2275 21.911C43.3117 22.6429 44.7019 22.9956 46.392 22.9956C48.4124 22.9956 50.1025 22.4908 51.29 21.1022C51.8716 20.419 52.1735 19.5858 52.1735 18.6026C52.1735 16.2024 50.4328 14.8644 47.7051 14.8644L47.7092 14.8685ZM46.3697 7.24001C47.3809 7.24001 48.1125 7.97184 48.1125 9.00978C48.1125 10.0477 47.3809 10.7268 46.3697 10.7268C45.3585 10.7268 44.6289 10.0193 44.6289 9.00978C44.6289 8.00022 45.3605 7.24001 46.3697 7.24001ZM46.396 20.3744C44.6796 20.3744 43.5447 19.7419 43.5447 18.556C43.5447 18.0512 43.644 17.6721 43.8224 17.3944C44.2256 17.4694 44.7059 17.4937 45.2875 17.4937H47.004C48.3678 17.4937 49.0487 17.9235 49.0487 18.8074C49.0487 19.8433 48.1651 20.3744 46.398 20.3744H46.396Z" fill="black"/>
-        <path d="M88.6122 15.1716C87.5016 15.1716 86.9464 14.6161 86.9464 13.1018V7.59583H90.3043V4.91786H86.9464V-0.235352L83.8155 1.73511V4.91583H81.8457V7.5938H83.8155V13.1504C83.8155 16.2582 85.5562 17.8495 88.4865 17.8495C89.2181 17.8495 89.899 17.6975 90.5556 17.3954L89.824 14.8695C89.4451 15.0702 89.0418 15.1716 88.6122 15.1716Z" fill="black"/>
-        <path d="M75.6592 4.71447C74.0684 4.71447 72.7553 5.47063 71.7218 6.96267V3.97656L68.5908 5.94703V17.6462H71.7218V12.57C71.7218 9.3629 73.0086 7.39447 74.6257 7.39447C75.8376 7.39447 76.4435 8.10197 76.4435 9.49062V17.6462H79.5744V8.55404C79.5744 6.05447 78.0079 4.7165 75.6592 4.7165V4.71447Z" fill="black"/>
-        <path d="M60.2248 4.7373L54.1878 8.53633C53.8535 9.42425 53.6934 10.375 53.6934 11.2812C53.6934 14.3139 55.4341 17.8494 59.8032 17.8494C62.5816 17.8494 64.5007 16.6108 65.5869 14.1376L63.0618 13.203C62.3039 14.5146 61.2684 15.1714 59.9816 15.1714C58.1638 15.1714 57.0533 13.8335 56.9763 12.2928H65.7388V11.0055C65.7388 9.56616 65.2829 8.07412 64.375 6.83954C63.53 5.64348 62.0506 4.8488 60.2268 4.73933L60.2248 4.7373ZM57.0492 9.81753C57.2782 8.47754 58.3138 7.39297 59.8012 7.39297C61.2887 7.39297 62.1742 8.20184 62.5289 9.81753H57.0492Z" fill="black"/>
-        <path d="M104.307 11.0273C104.307 9.59004 103.853 8.10206 102.948 6.86748C102.04 5.58221 100.402 4.74902 98.3859 4.74902C94.0249 4.74902 92.2861 8.27843 92.2861 11.3051C92.2861 14.3317 94.0249 17.8611 98.3859 17.8611C101.158 17.8611 103.073 16.6265 104.157 14.1554L101.636 13.2228C100.88 14.5344 99.847 15.1892 98.5622 15.1892C96.7464 15.1892 95.638 13.8533 95.563 12.3146H104.307V11.0294V11.0273ZM95.638 9.84142C95.8649 8.50547 96.8984 7.42091 98.3839 7.42091C99.8693 7.42091 100.753 8.22774 101.105 9.84142H95.6359H95.638Z" fill="black"/>
-        </g>
-        <defs>
-        <clipPath id="clip0_1346_165">
-        <rect width="104.308" height="23.2361" fill="white"/>
-        </clipPath>
-        </defs>
-        </svg>
+        <div class="square">
+          <img src="https://placekitten.com/100/100" alt="I'm an image" width="100" height="100">
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class=" row w-100">
-    <div class="col-25 align-content-center">
       <p class="small">
-        Agora de la danse<br>
-        Édifice Wilder - Espace danse<br>
-        1435, rue de Bleury<br>
-        Montréal, QC H3A 2H7<br>
-        <br>
-        514 525-1500
-    </p>
+      Agora de la danse<br>
+      Édifice Wilder - Espace danse<br>
+      1435, rue de Bleury<br>
+      Montréal, QC H3A 2H7<br>
+      <br>
+      514 525-1500
+      </p>
     </div>
     <div class="col-25">
+      <div class="w-100 flex align-items-center">
+        <div class="square">
+          <svg width="105" height="24" viewBox="0 0 105 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1346_165)">
+          <path d="M33.9981 4.71447C32.4073 4.71447 31.0941 5.47063 30.0606 6.96267V3.97656L26.9297 5.94703V17.6462H30.0606V12.57C30.0606 9.3629 31.3474 7.39447 32.9646 7.39447C34.1764 7.39447 34.7824 8.10197 34.7824 9.49062V17.6462H37.9153V8.55404C37.9153 6.05447 36.3488 4.7165 34.0001 4.7165L33.9981 4.71447Z" fill="black"/>
+          <path d="M18.1773 4.71484C15.6279 4.71484 13.7332 6.12782 13.3299 8.25033L15.9805 8.85647C16.3088 7.87326 17.0404 7.39281 18.1773 7.39281C19.6667 7.39281 20.3983 8.02328 20.3983 9.25989V9.81737H18.2786C15.0463 9.81737 12.8496 11.4574 12.8496 13.9833C12.8496 16.5092 14.4647 17.8472 16.7121 17.8472C18.3272 17.8472 19.6404 17.2411 20.6273 16.0288L20.9536 17.6445H23.5313V10.0444C23.5313 6.48259 21.7378 4.71484 18.1773 4.71484ZM20.3983 12.544C20.3983 13.3265 20.0964 13.957 19.4904 14.4374C18.9088 14.9179 18.2259 15.1693 17.4437 15.1693C16.6108 15.1693 16.1305 14.6138 16.1305 13.9326C16.1305 12.8461 16.8621 12.2906 18.3009 12.2906H20.3963V12.544H20.3983Z" fill="black"/>
+          <path d="M13.079 0.822266H0V3.85094H4.89804V17.6462H4.91425L8.18096 15.1081V3.85094H13.079V0.822266Z" fill="black"/>
+          <path d="M47.7092 14.8685H45.1092C44.327 14.8685 43.9237 14.5664 43.9237 13.9339C43.9237 13.5305 44.1243 13.2021 44.5296 12.973C45.1112 13.1494 45.7415 13.2507 46.3717 13.2507C47.7112 13.2507 48.8217 12.8716 49.7053 12.1135C50.5888 11.331 51.0428 10.295 51.0428 9.00775C51.0428 8.24957 50.8665 7.56842 50.5382 6.98661L51.4643 6.49602V3.7998L48.7184 5.26752C47.9868 4.88843 47.2046 4.71206 46.3697 4.71206C45.0322 4.71206 43.9217 5.11547 43.0381 5.89798C42.1546 6.68049 41.6986 7.71641 41.6986 9.00572C41.6986 10.0416 42.0026 10.8992 42.5822 11.631C41.5466 12.2614 41.0177 13.1453 41.0177 14.3089C41.0177 15.0915 41.2447 15.7483 41.6743 16.2774C40.9914 16.9079 40.6367 17.7694 40.6367 18.8033C40.6367 20.1413 41.1677 21.1772 42.2275 21.911C43.3117 22.6429 44.7019 22.9956 46.392 22.9956C48.4124 22.9956 50.1025 22.4908 51.29 21.1022C51.8716 20.419 52.1735 19.5858 52.1735 18.6026C52.1735 16.2024 50.4328 14.8644 47.7051 14.8644L47.7092 14.8685ZM46.3697 7.24001C47.3809 7.24001 48.1125 7.97184 48.1125 9.00978C48.1125 10.0477 47.3809 10.7268 46.3697 10.7268C45.3585 10.7268 44.6289 10.0193 44.6289 9.00978C44.6289 8.00022 45.3605 7.24001 46.3697 7.24001ZM46.396 20.3744C44.6796 20.3744 43.5447 19.7419 43.5447 18.556C43.5447 18.0512 43.644 17.6721 43.8224 17.3944C44.2256 17.4694 44.7059 17.4937 45.2875 17.4937H47.004C48.3678 17.4937 49.0487 17.9235 49.0487 18.8074C49.0487 19.8433 48.1651 20.3744 46.398 20.3744H46.396Z" fill="black"/>
+          <path d="M88.6122 15.1716C87.5016 15.1716 86.9464 14.6161 86.9464 13.1018V7.59583H90.3043V4.91786H86.9464V-0.235352L83.8155 1.73511V4.91583H81.8457V7.5938H83.8155V13.1504C83.8155 16.2582 85.5562 17.8495 88.4865 17.8495C89.2181 17.8495 89.899 17.6975 90.5556 17.3954L89.824 14.8695C89.4451 15.0702 89.0418 15.1716 88.6122 15.1716Z" fill="black"/>
+          <path d="M75.6592 4.71447C74.0684 4.71447 72.7553 5.47063 71.7218 6.96267V3.97656L68.5908 5.94703V17.6462H71.7218V12.57C71.7218 9.3629 73.0086 7.39447 74.6257 7.39447C75.8376 7.39447 76.4435 8.10197 76.4435 9.49062V17.6462H79.5744V8.55404C79.5744 6.05447 78.0079 4.7165 75.6592 4.7165V4.71447Z" fill="black"/>
+          <path d="M60.2248 4.7373L54.1878 8.53633C53.8535 9.42425 53.6934 10.375 53.6934 11.2812C53.6934 14.3139 55.4341 17.8494 59.8032 17.8494C62.5816 17.8494 64.5007 16.6108 65.5869 14.1376L63.0618 13.203C62.3039 14.5146 61.2684 15.1714 59.9816 15.1714C58.1638 15.1714 57.0533 13.8335 56.9763 12.2928H65.7388V11.0055C65.7388 9.56616 65.2829 8.07412 64.375 6.83954C63.53 5.64348 62.0506 4.8488 60.2268 4.73933L60.2248 4.7373ZM57.0492 9.81753C57.2782 8.47754 58.3138 7.39297 59.8012 7.39297C61.2887 7.39297 62.1742 8.20184 62.5289 9.81753H57.0492Z" fill="black"/>
+          <path d="M104.307 11.0273C104.307 9.59004 103.853 8.10206 102.948 6.86748C102.04 5.58221 100.402 4.74902 98.3859 4.74902C94.0249 4.74902 92.2861 8.27843 92.2861 11.3051C92.2861 14.3317 94.0249 17.8611 98.3859 17.8611C101.158 17.8611 103.073 16.6265 104.157 14.1554L101.636 13.2228C100.88 14.5344 99.847 15.1892 98.5622 15.1892C96.7464 15.1892 95.638 13.8533 95.563 12.3146H104.307V11.0294V11.0273ZM95.638 9.84142C95.8649 8.50547 96.8984 7.42091 98.3839 7.42091C99.8693 7.42091 100.753 8.22774 101.105 9.84142H95.6359H95.638Z" fill="black"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_1346_165">
+          <rect width="104.308" height="23.2361" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+        </div>
+      </div>
       <p class="small">
-        Agora de la danse<br>
-        Édifice Wilder - Espace danse<br>
-        1435, rue de Bleury<br>
-        Montréal, QC H3A 2H7<br>
-        <br>
-        514 525-1500
-    </p>
-    </div>
-    <div class="col-25">
-      <p class="small">
-        Agora de la danse<br>
-        Édifice Wilder - Espace danse<br>
-        1435, rue de Bleury<br>
-        Montréal, QC H3A 2H7<br>
-        <br>
-        514 525-1500
-    </p>
-    </div>
-    <div class="col-25">
-      <p class="small">
-        Agora de la danse<br>
-        Édifice Wilder - Espace danse<br>
-        1435, rue de Bleury<br>
-        Montréal, QC H3A 2H7<br>
-        <br>
-        514 525-1500
-    </p>
+      Agora de la danse<br>
+      Édifice Wilder - Espace danse<br>
+      1435, rue de Bleury<br>
+      Montréal, QC H3A 2H7<br>
+      <br>
+      514 525-1500
+      </p>
     </div>
   </div>
 
