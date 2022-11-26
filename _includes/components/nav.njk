@@ -24,6 +24,7 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
+  z-index: 1;
 }
 
 #menuToggle input {
@@ -33,17 +34,32 @@
 }
 
 #menuToggle nav {
-  visibility: hidden;
+  transform: translatex(500px);
+  transition: 0.4s ease-in;
 }
 
 #menuToggle input:checked ~ nav
 {
-  visibility: visible;
+  transform: translatex(0px);
+  transition: 0.4s ease-out;
 }
 
-#menuToggle input:checked ~ div:first-child
+#menuToggle input ~ #hamburger > div span
 {
-  visibility: hidden; /* this doesn't work! */
+  transform: translatex(0px);
+  transition: 0.2s ease-in-out;
+}
+
+#menuToggle input:checked ~ #hamburger > div span:nth-child(1)
+{
+  transform: translatex(5px);
+  transition: 0.2s ease-in-out;
+}
+
+#menuToggle input:checked ~ #hamburger > div span:nth-child(2)
+{
+  transform: translatex(-5px);
+  transition: 0.2s ease-in-out;
 }
 
 #menuToggle span
@@ -60,10 +76,6 @@
    margin: 0 auto 10px auto;
 }
 
-#menuToggle input:checked ~ span:first-child {
-  transform: translatex(5px);
-}
-
 .center {
   margin: 0;
   position: absolute;
@@ -74,14 +86,14 @@
 
 </style>
 
-<div id="menuToggle">
+<div id="menuToggle" class="desktop-none">
   <input type="checkbox" />
-    <div id="hamburger">
-      <div class="center">
-        <span></span>
-        <span></span>
-      </div>
+  <div id="hamburger">
+    <div class="center">
+      <span></span>
+      <span></span>
     </div>
+  </div>
   <nav style="padding-right: 50px;">
     <ul>
       <li>
