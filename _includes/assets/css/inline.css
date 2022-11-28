@@ -33,7 +33,7 @@
 	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	/* object-fit: cover; */ /* Removed because of thin lines between images */
 	object-position: 50% 50%;
   }
   /*
@@ -429,6 +429,25 @@ h5 {
 	background-color: #fff;
 	display: inline-block;
 }
+
+/* Fix background showing through */
+/* .show-content {
+	margin: -1px; 
+} */
+
+/* .w-100 {
+	margin: -1px;
+}
+
+.ml-30.mr-30.small.w-100.nowrap {
+    padding: 0 0 0 1px;
+	margin-right: 29px;
+}
+
+.col-20.flex.text-align-right {
+    margin-right: -1px; 
+} */
+/* Fix background showing through */
 
 
 p {
@@ -859,4 +878,12 @@ details > summary {
 		height: auto;
 		z-index: auto;
 	}
+}
+
+
+/* Misc changes */
+
+.credits-logo img {
+	width: 100px;
+	height: auto;
 }
