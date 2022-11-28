@@ -8,84 +8,6 @@
   </ul>
 </nav>
 
-<style>
-
-#hamburger {
-  background-color: #D8D8D8;
-  border-radius: 100px;
-}
-
-#hamburger,
-#menuToggle input {
-  display: block;
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-#menuToggle input {
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
-}
-
-#menuToggle nav {
-  transform: translatex(500px);
-  transition: 0.4s ease-in;
-}
-
-#menuToggle input:checked ~ nav
-{
-  transform: translatex(0px);
-  transition: 0.4s ease-out;
-}
-
-#menuToggle input ~ #hamburger > div span
-{
-  transform: translatex(0px);
-  transition: 0.2s ease-in-out;
-}
-
-#menuToggle input:checked ~ #hamburger > div span:nth-child(1)
-{
-  transform: translatex(5px);
-  transition: 0.2s ease-in-out;
-}
-
-#menuToggle input:checked ~ #hamburger > div span:nth-child(2)
-{
-  transform: translatex(-5px);
-  transition: 0.2s ease-in-out;
-}
-
-#menuToggle span
-{
-  display: block;
-  width: 20px;
-  height: 3px;
-  margin: 0 auto;
-  position: relative;
-  background: #000;
-  z-index: 1;
-}
-#menuToggle span:first-child {
-   margin: 0 auto 10px auto;
-}
-
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-</style>
-
 <div id="menuToggle" class="desktop-none">
   <input type="checkbox" />
   <div id="hamburger">
@@ -94,7 +16,7 @@
       <span></span>
     </div>
   </div>
-  <nav style="padding-right: 50px;">
+  <nav style="padding-right: 35px;">
     <ul>
       <li>
         <a href="/en">En</a>
