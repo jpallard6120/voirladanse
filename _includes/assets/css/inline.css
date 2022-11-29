@@ -932,3 +932,16 @@ body { /* Make Hero Row links clickable */
 html { /* Smooth scrolling on anchro links */
     scroll-behavior: smooth;
 }
+
+.show-row li {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.show-row nav ul :first-child {
+	margin: 0.25em;
+}
+
+.show-row nav ul li {
+	margin-left: 0 !important;
+}
