@@ -20,40 +20,42 @@
         <p class="ml-30 mr-30 show-content pr-10 pt-10">{{description}}</p>
       </div>
       <div class="show-content ml-30 mr-30 w-100" style="height:1em;"></div> {# This is just a spacer #}
-      <div class="col-40 flex">
-        <p class="ml-30 pr-0 show-content w-100 relative">
-          {{date1}}
-          <span class="line absolute"></span>
-        </p>
-        <p class="ml-30 pr-0 show-content w-100 relative">
-          {{date2}}
-          <span class="line absolute"></span>
-        </p>
-        {% if date3 %}
-        <p class="ml-30 pr-0 show-content w-100 relative">
-          {{date3}}
-          <span class="line absolute"></span>
-        </p>
-        {% endif %}
-        {% if date4 %}
-        <p class="ml-30 pr-0 show-content w-100 relative">
-          {{date4}}
-          <span class="line absolute"></span>
-        </p>
-        {% endif %}
-      </div>
-      <div class="col-20 flex text-align-right">
-        <p class="show-content w-100 pr-30">{{time1}}</p>
-        <p class="show-content w-100 pr-30">{{time2}}</p>
-        <p class="show-content w-100 pr-30">{{time3}}</p>
-        {% if time4 %}
-          <p class="show-content w-100 pr-30">{{time4}}</p>
-        {% endif %}
-      </div>
-      <div class="col-40 flex">
-        <p class="mr-30 show-content w-100">{{duration}}</p>
-        <p class="mr-30 show-content w-100">&nbsp;</p>
-        <p class="mr-30 show-content w-100">{{location}}</p>
+      <div class="flex">
+        <div class="col-40 flex mobile-flex-shrink-0">
+          <p class="ml-30 pr-0 show-content w-100 relative">
+            {{date1}}
+            <span class="line absolute"></span>
+          </p>
+          <p class="ml-30 pr-0 show-content w-100 relative">
+            {{date2}}
+            <span class="line absolute"></span>
+          </p>
+          {% if date3 %}
+          <p class="ml-30 pr-0 show-content w-100 relative">
+            {{date3}}
+            <span class="line absolute"></span>
+          </p>
+          {% endif %}
+          {% if date4 %}
+          <p class="ml-30 pr-0 show-content w-100 relative">
+            {{date4}}
+            <span class="line absolute"></span>
+          </p>
+          {% endif %}
+        </div>
+        <div class="col-20 flex text-align-right">
+          <p class="show-content w-100 pr-30">{{time1}}</p>
+          <p class="show-content w-100 pr-30">{{time2}}</p>
+          <p class="show-content w-100 pr-30">{{time3}}</p>
+          {% if time4 %}
+            <p class="show-content w-100 pr-30">{{time4}}</p>
+          {% endif %}
+        </div>
+        <div class="col-40 flex">
+          <p class="mr-30 show-content w-100">{{duration}}</p>
+          <p class="mr-30 show-content w-100">&nbsp;</p>
+          <p class="mr-30 show-content w-100">{{location}}</p>
+        </div>
       </div>
       <div class="show-content ml-30 mr-30 w-100" style="height:1em;"></div> {# This is just a spacer #}
       <div class="ml-30 mr-30 small w-100 nowrap">
@@ -122,41 +124,42 @@
       <p class="ml-30 mr-30 show-content pr-10 pt-10">{{description_1}}</p>
     </div>
       <div class="show-content ml-30 mr-30 w-100" style="height:1em;"></div> {# This is just a spacer #}
-
-      <div class="col-40 flex">
-        <p class="ml-30 pr-0 show-content w-100 relative">
-          {{date1_1}}
-          <span class="line absolute"></span>
-        </p>
-        <p class="ml-30 pr-0 show-content w-100 relative">
-          {{date2_1}}
-          <span class="line absolute"></span>
-        </p>
-        {% if date3_1 %}
-        <p class="ml-30 pr-0 show-content w-100 relative">
-          {{date3_1}}
-          <span class="line absolute"></span>
+      <div class="flex">
+        <div class="col-40 flex mobile-flex-shrink-0">
+          <p class="ml-30 pr-0 show-content w-100 relative">
+            {{date1_1}}
+            <span class="line absolute"></span>
           </p>
-        {% endif %}
-        {% if date4_1 %}
-        <p class="ml-30 pr-0 show-content w-100 relative">
-          {{date4_1}}
-          <span class="line absolute"></span>
-        </p>
-        {% endif %}
-      </div>
-      <div class="col-20 flex text-align-right">
-        <p class="show-content w-100 pr-30">{{time1_1}}</p>
-        <p class="show-content w-100 pr-30">{{time2_1}}</p>
-        <p class="show-content w-100 pr-30">{{time3_1}}</p>
-        {% if time4_1 %}
+          <p class="ml-30 pr-0 show-content w-100 relative">
+            {{date2_1}}
+            <span class="line absolute"></span>
+          </p>
+          {% if date3_1 %}
+          <p class="ml-30 pr-0 show-content w-100 relative">
+            {{date3_1}}
+            <span class="line absolute"></span>
+            </p>
+          {% endif %}
+          {% if date4_1 %}
+          <p class="ml-30 pr-0 show-content w-100 relative">
+            {{date4_1}}
+            <span class="line absolute"></span>
+          </p>
+          {% endif %}
+        </div>
+        <div class="col-20 flex text-align-right">
+          <p class="show-content w-100 pr-30">{{time1_1}}</p>
+          <p class="show-content w-100 pr-30">{{time2_1}}</p>
           <p class="show-content w-100 pr-30">{{time3_1}}</p>
-        {% endif %}
-      </div>
-      <div class="col-40 flex">
-        <p class="mr-30 show-content w-100">{{duration_1}}</p>
-        <p class="mr-30 show-content w-100">&nbsp;</p>
-        <p class="mr-30 show-content w-100">{{location_1}}</p>
+          {% if time4_1 %}
+            <p class="show-content w-100 pr-30">{{time3_1}}</p>
+          {% endif %}
+        </div>
+        <div class="col-40 flex">
+          <p class="mr-30 show-content w-100">{{duration_1}}</p>
+          <p class="mr-30 show-content w-100">&nbsp;</p>
+          <p class="mr-30 show-content w-100">{{location_1}}</p>
+        </div>
       </div>
       <div class="show-content ml-30 mr-30 w-100" style="height:1em;"></div> {# This is just a spacer #}
       <div class="ml-30 mr-30 small w-100">

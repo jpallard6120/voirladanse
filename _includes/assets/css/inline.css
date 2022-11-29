@@ -654,7 +654,7 @@ span.line {
 	background-color:#000;
 	top: 1.4em;
     left: 5px;
-    width: 145%;
+    width: 175%;
     z-index: 10;
 }
 
@@ -894,6 +894,9 @@ details > summary {
 	}
 	.col-20 {
 		flex-basis: auto;
+	}
+	.mobile-flex-shrink-0 {
+		flex-shrink: 0
 	}
 }
 
