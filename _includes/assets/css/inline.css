@@ -930,12 +930,14 @@ details > summary {
 main { /* Make footer links clickable */
 	z-index: -10;
     position: relative;
+	overflow-x: hidden; /* Solves mobile overflow issue */
 }
 
 body { /* Make Hero Row links clickable */
 	position: relative;
     z-index: -10;
 	width: 100%;
+	overflow-x: hidden; /* Solves mobile overflow issue */
 }
 
 html { /* Smooth scrolling on anchor links */
