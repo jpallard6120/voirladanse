@@ -33,7 +33,7 @@
 	display: block;
 	width: 100%;
 	height: 100%;
-	/* object-fit: cover; */ /* Removed because of thin lines between images */
+	object-fit: cover;
 	object-position: 50% 50%;
   }
   /*
@@ -66,6 +66,8 @@
 	--white: #fff;
 	--magenta: #FF1D99;
 	--red: #FF0600;
+	--green: #6DF416;
+	--orange: #FF6700;
 }
 /* END COLOR VARS */
 
@@ -84,6 +86,12 @@
 }
 .background-red {
 	background-color: var(--red);
+}
+.background-green {
+	background-color: var(--green);
+}
+.background-orange {
+	background-color: var(--orange);
 }
 /* END COLORS */
 
@@ -130,7 +138,7 @@
 /* GENERIC STYLING */
 a[href],
 a[href]:visited {
-	color: var(--primary);
+	color: #000
 }
 
 a[href]:not(:hover) {
@@ -381,6 +389,12 @@ h1 {
     line-height: 1.05em;
 	font-weight: 400;
 	letter-spacing: .02em;
+}
+
+@media screen and (max-width: 1070px) {
+	h1 {
+		font-size: 4.2em;
+	}
 }
 
 @media screen and (min-width: 905px) {
@@ -709,11 +723,8 @@ details > summary {
 .footer img,
 .showtimes-table .flex img {
 	display: unset;
-	width: unset;
-	height: unset;
 	object-fit: contain;
 	object-position: unset;
-	padding: 0 10px;
 }
 
 .showtimes-table div {
@@ -878,6 +889,12 @@ details > summary {
 		height: auto;
 		z-index: auto;
 	}
+	.showtimes-table div {
+		justify-content: space-between;
+	}
+	.col-20 {
+		flex-basis: auto;
+	}
 }
 
 
@@ -886,4 +903,29 @@ details > summary {
 .credits-logo img {
 	width: 100px;
 	height: auto;
+}
+
+.mobile-h-100 {
+	height: 100px;
+	width: 100px;
+	min-width: 80px;
+}
+
+.no-scale {
+	width: auto;
+	height: auto;
+}
+
+main { /* Make footer links clickable */
+	z-index: -10;
+    position: relative;
+}
+
+body { /* Make Hero Row links clickable */
+	position: relative;
+    z-index: -10;
+}
+
+html { /* Smooth scrolling on anchro links */
+    scroll-behavior: smooth;
 }

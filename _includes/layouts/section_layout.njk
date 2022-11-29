@@ -1,4 +1,4 @@
-<div class="row show-row p-0 flex-align-start background-{{color}}">
+<div id="{{color}}" class="row show-row p-0 flex-align-start background-{{color}}">
     <div class="absolute h-200vh w-100 sticky-title-container">
     <h1 class="pt-30 pr-60 ml-30 w-50 sticky sticky-title">{{title}}</h1>
     </div>
@@ -11,6 +11,11 @@
       <div class="w-100">
         <h3 class="ml-30 mr-30 pr-10 background-white">{{author}}</h3>
       </div>
+      {% if author2 %}
+        <div class="w-100">
+        <h3 class="ml-30 mr-30 pr-10 background-white">{{author2}}</h3>
+      </div>
+      {% endif %}
       <div class="w-100">
         <p class="ml-30 mr-30 show-content pr-10 pt-10">{{description}}</p>
       </div>
@@ -24,10 +29,12 @@
           {{date2}}
           <span class="line absolute"></span>
         </p>
+        {% if date3 %}
         <p class="ml-30 pr-0 show-content w-100 relative">
           {{date3}}
           <span class="line absolute"></span>
         </p>
+        {% endif %}
         {% if date4 %}
         <p class="ml-30 pr-0 show-content w-100 relative">
           {{date4}}
@@ -106,6 +113,11 @@
     <div class="w-100">
       <h3 class="ml-30 mr-30 pr-10 background-white">{{author_1}}</h3>
     </div>
+      {% if author2_1 %}
+        <div class="w-100">
+        <h3 class="ml-30 mr-30 pr-10 background-white">{{author2_1}}</h3>
+      </div>
+      {% endif %}
     <div class="w-100">
       <p class="ml-30 mr-30 show-content pr-10 pt-10">{{description_1}}</p>
     </div>
@@ -120,10 +132,12 @@
           {{date2_1}}
           <span class="line absolute"></span>
         </p>
+        {% if date3_1 %}
         <p class="ml-30 pr-0 show-content w-100 relative">
           {{date3_1}}
           <span class="line absolute"></span>
           </p>
+        {% endif %}
         {% if date4_1 %}
         <p class="ml-30 pr-0 show-content w-100 relative">
           {{date4_1}}
@@ -186,8 +200,10 @@
   </div>
   <div class="col-50 flex sticky height-vh-100">
     <picture>
-      <source srcset="static/img/animations/Agora-la_god_damn_voie_lactee.webp" type="image/webp">
-      <img src="static/img/calendrier_spectacles/Agora_LaGoddamVoieLactee.jpg" width="1200" height="1800" loading="lazy" decoding="async">
+      {% if webp_image_1 %}
+      <source srcset="{{webp_image_1}}" type="image/webp">
+      {% endif %}
+      <img src="{{fallback_image_1}}" width="1200" height="1800" loading="lazy" decoding="async">
     </picture>
   </div>
 </div>
