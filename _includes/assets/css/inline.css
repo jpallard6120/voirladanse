@@ -937,8 +937,9 @@ body { /* Make Hero Row links clickable */
     z-index: -10;
 }
 
-html { /* Smooth scrolling on anchro links */
+html { /* Smooth scrolling on anchor links */
     scroll-behavior: smooth;
+	overflow-x: hidden; /* Solves mobile overflow issue */
 }
 
 .show-row li {
