@@ -929,8 +929,9 @@ details > summary {
 
 main { /* Make footer links clickable */
 	z-index: -10;
-    position: relative;
-	overflow-x: hidden; /* Solves mobile overflow issue */
+	width: 100%;
+    /* position: relative; */
+	/* overflow-x: hidden; */
 }
 
 body { /* Make Hero Row links clickable */
