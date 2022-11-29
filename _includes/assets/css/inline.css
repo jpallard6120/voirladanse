@@ -935,6 +935,7 @@ main { /* Make footer links clickable */
 body { /* Make Hero Row links clickable */
 	position: relative;
     z-index: -10;
+	width: 100%;
 }
 
 html { /* Smooth scrolling on anchor links */
