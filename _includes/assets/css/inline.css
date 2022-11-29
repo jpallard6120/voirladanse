@@ -167,7 +167,7 @@ body {
 /* Header Nav */
 header {
     position: fixed;
-    right: 10px;
+    right: 25px;
     top: 10px;
 	padding: 20px 20px;
 	z-index: 1000;
