@@ -365,14 +365,50 @@ partnersData_Tangente:
       Sélectionnez deux spectacles parmi l’offre alléchante de huit spectacles pour le prix de <strong>50$*</strong>
     </p>
   </div>
-  <h3 class="w-100 ml-30 pt-60">
-    Agora de la danse
-  </h3>
-  <h4 class="w-75 ml-30">
-    (Montréal)
-  </h4>
+
   
   <div class="showtimes-table ml-40 w-100">
+
+<div class="relative w-75 flex pt-30 showtimes-row">
+      <span class="line-top absolute"></span>
+      <div class="mobile-h-100">
+        <img src="{{partnersData_Tangente.fallback_image}}" alt="I'm an image" width="100" height="100">
+      </div>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="col-25">
+          <h4>
+            {{partnersData_Tangente.title2}}
+          </h4>
+          <h5>
+            Tangente (Montréal)
+          </h5>
+        </div>
+        <div class="col-20">
+          {{partnersData_Tangente.date1}}<br>
+          {{partnersData_Tangente.date2}}<br>
+          {{partnersData_Tangente.date3}}<br>
+          {{partnersData_Tangente.date4}}
+        </div>
+        <div class="col-20">
+          {{partnersData_Tangente.time1}}<br>
+          {{partnersData_Tangente.time2}}<br>
+          {{partnersData_Tangente.time3}}<br>
+          {{partnersData_Tangente.time4}}<br>
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.tangente_never_not %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
     <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
       <div class="mobile-h-100">
@@ -380,8 +416,11 @@ partnersData_Tangente:
       </div>
       <div class="row-text-content flex flex-grow-1 nowrap">
         <div class="col-25">
-          <h5>
+          <h4>
             {{partnersData_Agora.title2}}
+          </h4>
+          <h5>
+            Agora de la danse (Montréal)
           </h5>
         </div>
         <div class="col-20">
@@ -407,54 +446,7 @@ partnersData_Tangente:
         </div>
       </div>
     </div>
-    <div class="relative w-75 flex pt-30 showtimes-row">
-      <span class="line-top absolute"></span>
 
-      <div class="mobile-h-100">
-        <img src="{{partnersData_Agora.fallback_image_1}}" alt="I'm an image" width="100" height="100">
-      </div>
-      <div class="row-text-content flex flex-grow-1 nowrap">
-        <div class="col-25">
-          <h5>
-            {{partnersData_Agora.title_1}}
-          </h5>
-        </div>
-        <div class="col-20">
-          {{partnersData_Agora.date1_1}}<br>
-          {{partnersData_Agora.date2_1}}<br>
-          {{partnersData_Agora.date3_1}}
-        </div>
-        <div class="col-20">
-          {{partnersData_Agora.time1_1}}<br>
-          {{partnersData_Agora.time2_1}}<br>
-          {{partnersData_Agora.time3_1}}
-        </div>
-        <div class="flex-grow-3">
-          {% if collections.show_availability[0].data.agora_goddam %}
-          <button class="secondary-button">
-            <a href="#">Sélectionner</a>
-          </button>
-          {% else %}
-          <button class="unavailable-button">
-            Complet
-          </button>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    <div class="relative w-75 flex pt-30 showtimes-row">
-      <span class="line-top absolute"></span>
-    </div>
-  </div>
-
-  <h3 class="w-100 ml-30 pt-60">
-    Danse danse
-  </h3>
-  <h4 class="w-75 ml-30">
-    (Montréal)
-  </h4>
-  
-  <div class="showtimes-table ml-40 w-100">
     <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
       <div class="mobile-h-100">
@@ -462,8 +454,11 @@ partnersData_Tangente:
       </div>
       <div class="row-text-content flex flex-grow-1 nowrap">
         <div class="col-25">
-          <h5>
+          <h4>
             {{partnersData_DanseDanse.title2}}
+          </h4>
+          <h5>
+            Danse Danse (Montréal)
           </h5>
         </div>
         <div class="col-20">
@@ -491,6 +486,119 @@ partnersData_Tangente:
         </div>
       </div>
     </div>
+
+    <div class="relative w-75 flex pt-30 showtimes-row">
+      <span class="line-top absolute"></span>
+      <div class="mobile-h-100">
+        <img src="{{partnersData_Rotonde.fallback_image}}" alt="I'm an image" width="100" height="100">
+      </div>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="col-25">
+          <h4>
+            {{partnersData_Rotonde.title2}}
+          </h4>
+          <h5>
+            La Rotonde (Québec)
+          </h5>
+        </div>
+        <div class="col-20">
+          {{partnersData_DanseDanse.date1}}<br>
+          {{partnersData_DanseDanse.date2}}<br>
+        </div>
+        <div class="col-20">
+          {{partnersData_DanseDanse.time1}}<br>
+          {{partnersData_DanseDanse.time2}}<br>
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.rotonde_mefier %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+<div class="relative w-75 flex pt-30 showtimes-row">
+      <span class="line-top absolute"></span>
+      <div class="mobile-h-100">
+        <img src="{{partnersData_Tangente.fallback_image_1}}" alt="I'm an image" width="100" height="100">
+      </div>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="col-25">
+          <h4>
+            {{partnersData_Tangente.title_1}}
+          </h4>
+          <h5>
+            Tangente (Montréal)
+          </h5>
+        </div>
+        <div class="col-20">
+          {{partnersData_Tangente.date1_1}}<br>
+          {{partnersData_Tangente.date2_1}}<br>
+          {{partnersData_Tangente.date3_1}}<br>
+          {{partnersData_Tangente.date4_1}}
+        </div>
+        <div class="col-20">
+          {{partnersData_Tangente.time1_1}}<br>
+          {{partnersData_Tangente.time2_1}}<br>
+          {{partnersData_Tangente.time3_1}}<br>
+          {{partnersData_Tangente.time4_1}}<br>
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.tangente_100lux %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+<div class="relative w-75 flex pt-30 showtimes-row">
+      <span class="line-top absolute"></span>
+      <div class="mobile-h-100">
+        <img src="{{partnersData_Rotonde.fallback_image_1}}" alt="I'm an image" width="100" height="100">
+      </div>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="col-25">
+          <h4>
+            {{partnersData_Rotonde.title_1}}
+          </h4>
+          <h5>
+            La Rotonde (Québec)
+          </h5>
+        </div>
+        <div class="col-20">
+          {{partnersData_DanseDanse.date1_1}}<br>
+          {{partnersData_DanseDanse.date2_1}}<br>
+        </div>
+        <div class="col-20">
+          {{partnersData_DanseDanse.time1_1}}<br>
+          {{partnersData_DanseDanse.time2_1}}<br>
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.rotonde_efer %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+
     <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
 
@@ -499,8 +607,11 @@ partnersData_Tangente:
       </div>
       <div class="row-text-content flex flex-grow-1 nowrap">
         <div class="col-25">
+          <h4>
+            {{partnersData_DanseDanse.title_1}}
+          </h4>
           <h5>
-            {{partnersData_DanseDanse.title2_1}}
+            Danse Danse (Montréal)
           </h5>
         </div>
         <div class="col-20">
@@ -530,172 +641,55 @@ partnersData_Tangente:
     </div>
     <div class="relative w-75 flex pt-30 showtimes-row">
       <span class="line-top absolute"></span>
+      <div class="mobile-h-100">
+        <img src="{{partnersData_Agora.fallback_image_1}}" alt="I'm an image" width="100" height="100">
+      </div>
+      <div class="row-text-content flex flex-grow-1 nowrap">
+        <div class="col-25">
+          <h4>
+            {{partnersData_Agora.title_1}}
+          </h4>
+          <h5>
+            Agora de la danse (Montréal)
+          </h5>
+        </div>
+        <div class="col-20">
+          {{partnersData_Agora.date1_1}}<br>
+          {{partnersData_Agora.date2_1}}<br>
+          {{partnersData_Agora.date3_1}}
+        </div>
+        <div class="col-20">
+          {{partnersData_Agora.time1_1}}<br>
+          {{partnersData_Agora.time2_1}}<br>
+          {{partnersData_Agora.time3_1}}
+        </div>
+        <div class="flex-grow-3">
+          {% if collections.show_availability[0].data.agora_goddam %}
+          <button class="secondary-button">
+            <a href="#">Sélectionner</a>
+          </button>
+          {% else %}
+          <button class="unavailable-button">
+            Complet
+          </button>
+          {% endif %}
+        </div>
+      </div>
     </div>
-  </div>
 
-  <h3 class="w-100 ml-30 pt-60">
-    La Rotonde
-  </h3>
-  <h4 class="w-75 ml-30">
-    (Québec)
-  </h4>
+
+
+
+
+
+
+
+    <div class="relative w-75 flex pt-30 showtimes-row">
+      <span class="line-top absolute"></span>
+    </div>
+
+  </div>
   
-  <div class="showtimes-table ml-40 w-100">
-    <div class="relative w-75 flex pt-30 showtimes-row">
-      <span class="line-top absolute"></span>
-      <div class="mobile-h-100">
-        <img src="{{partnersData_Rotonde.fallback_image}}" alt="I'm an image" width="100" height="100">
-      </div>
-      <div class="row-text-content flex flex-grow-1 nowrap">
-        <div class="col-25">
-          <h5>
-            {{partnersData_Rotonde.title2}}
-          </h5>
-        </div>
-        <div class="col-20">
-          {{partnersData_DanseDanse.date1}}<br>
-          {{partnersData_DanseDanse.date2}}<br>
-        </div>
-        <div class="col-20">
-          {{partnersData_DanseDanse.time1}}<br>
-          {{partnersData_DanseDanse.time2}}<br>
-        </div>
-        <div class="flex-grow-3">
-          {% if collections.show_availability[0].data.rotonde_mefier %}
-          <button class="secondary-button">
-            <a href="#">Sélectionner</a>
-          </button>
-          {% else %}
-          <button class="unavailable-button">
-            Complet
-          </button>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    <div class="relative w-75 flex pt-30 showtimes-row">
-      <span class="line-top absolute"></span>
-
-      <div class="mobile-h-100">
-        <img src="{{partnersData_Rotonde.fallback_image_1}}" alt="I'm an image" width="100" height="100">
-      </div>
-      <div class="row-text-content flex flex-grow-1 nowrap">
-        <div class="col-25">
-          <h5>
-            {{partnersData_Rotonde.title2_1}}
-          </h5>
-        </div>
-        <div class="col-20">
-          {{partnersData_DanseDanse.date1_1}}<br>
-          {{partnersData_DanseDanse.date2_1}}<br>
-        </div>
-        <div class="col-20">
-          {{partnersData_DanseDanse.time1_1}}<br>
-          {{partnersData_DanseDanse.time2_1}}<br>
-        </div>
-        <div class="flex-grow-3">
-          {% if collections.show_availability[0].data.rotonde_efer %}
-          <button class="secondary-button">
-            <a href="#">Sélectionner</a>
-          </button>
-          {% else %}
-          <button class="unavailable-button">
-            Complet
-          </button>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    <div class="relative w-75 flex pt-30 showtimes-row">
-      <span class="line-top absolute"></span>
-    </div>
-  </div>
-
-  <h3 class="w-100 ml-30 pt-60">
-    Tangente
-  </h3>
-  <h4 class="w-75 ml-30">
-    (Montréal)
-  </h4>
-  
-  <div class="showtimes-table ml-40 w-100">
-    <div class="relative w-75 flex pt-30 showtimes-row">
-      <span class="line-top absolute"></span>
-      <div class="mobile-h-100">
-        <img src="{{partnersData_Tangente.fallback_image}}" alt="I'm an image" width="100" height="100">
-      </div>
-      <div class="row-text-content flex flex-grow-1 nowrap">
-        <div class="col-25">
-          <h5>
-            {{partnersData_Tangente.title2}}
-          </h5>
-        </div>
-        <div class="col-20">
-          {{partnersData_Tangente.date1}}<br>
-          {{partnersData_Tangente.date2}}<br>
-          {{partnersData_Tangente.date3}}<br>
-          {{partnersData_Tangente.date4}}
-        </div>
-        <div class="col-20">
-          {{partnersData_Tangente.time1}}<br>
-          {{partnersData_Tangente.time2}}<br>
-          {{partnersData_Tangente.time3}}<br>
-          {{partnersData_Tangente.time4}}<br>
-        </div>
-        <div class="flex-grow-3">
-          {% if collections.show_availability[0].data.tangente_never_not %}
-          <button class="secondary-button">
-            <a href="#">Sélectionner</a>
-          </button>
-          {% else %}
-          <button class="unavailable-button">
-            Complet
-          </button>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    <div class="relative w-75 flex pt-30 showtimes-row">
-      <span class="line-top absolute"></span>
-
-      <div class="mobile-h-100">
-        <img src="{{partnersData_Tangente.fallback_image_1}}" alt="I'm an image" width="100" height="100">
-      </div>
-      <div class="row-text-content flex flex-grow-1 nowrap">
-        <div class="col-25">
-          <h5>
-            {{partnersData_Tangente.title_1}}
-          </h5>
-        </div>
-        <div class="col-20">
-          {{partnersData_Tangente.date1_1}}<br>
-          {{partnersData_Tangente.date2_1}}<br>
-          {{partnersData_Tangente.date3_1}}<br>
-          {{partnersData_Tangente.date4_1}}
-        </div>
-        <div class="col-20">
-          {{partnersData_Tangente.time1_1}}<br>
-          {{partnersData_Tangente.time2_1}}<br>
-          {{partnersData_Tangente.time3_1}}<br>
-          {{partnersData_Tangente.time4_1}}<br>
-        </div>
-        <div class="flex-grow-3">
-          {% if collections.show_availability[0].data.tangente_100lux %}
-          <button class="secondary-button">
-            <a href="#">Sélectionner</a>
-          </button>
-          {% else %}
-          <button class="unavailable-button">
-            Complet
-          </button>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    <div class="relative w-75 flex pt-30 showtimes-row">
-      <span class="line-top absolute"></span>
-    </div>
-  </div>
 </div>
 {# END PROGRAMMATION #}
 <div class="background-white" style="height:5em;"></div> {# This is just a spacer #}

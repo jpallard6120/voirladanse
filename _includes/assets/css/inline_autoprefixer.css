@@ -429,13 +429,13 @@ h3 {
 	}
 }
 h4 {
-	font-size: 1.5em;
+	font-size: 1.1em;
 	font-weight: 400;
 	display: inline-block;
     padding-left: 10px;
 }
 h5 {
-	font-size: 1.1em;
+	font-size: 0.9em;
 	font-weight: 400;
 	display: inline-block;
     padding-left: 10px;
@@ -965,4 +965,16 @@ html { /* Smooth scrolling on anchor links */
 
 .show-row nav ul li {
 	margin-left: 0 !important;
+}
+
+.mobile-h-100 {
+	width: 75px;
+}
+
+.mobile-h-100 img {
+	object-fit: cover !important;
+}
+
+body {
+	scroll-behavior: smooth;
 }
