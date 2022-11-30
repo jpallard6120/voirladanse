@@ -1,0 +1,968 @@
+/*CSS RESET*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+	box-sizing: border-box;
+  }
+  /*
+	2. Remove default margin
+  */
+  * {
+	margin: 0;
+  }
+  /*
+	3. Allow percentage-based heights in the application
+  */
+  html, body {
+	height: 100%;
+  }
+  /*
+	Typographic tweaks!
+	4. Add accessible line-height
+	5. Improve text rendering
+  */
+  body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+  }
+  /*
+	6. Improve media defaults
+  */
+  img, picture, video, canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: 50% 50%;
+	   object-position: 50% 50%;
+  }
+  /*
+	7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+	font: inherit;
+  }
+  /*
+	8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+  }
+  /*
+	9. Create a root stacking context
+  */
+  #root, #__next {
+	isolation: isolate;
+  }
+  /* END CSS RESET */
+
+  /* COLOR VARS */
+:root {
+	--primary: blue;
+	--secondary: white;
+	--background: #FFF0EB;
+	--yellow: #EDFF00;
+	--turquoise: #6EEDD5;
+	--white: #fff;
+	--magenta: #FF1D99;
+	--red: #FF0600;
+	--green: #6DF416;
+	--orange: #FF6700;
+}
+/* END COLOR VARS */
+
+/* COLORS */
+.background-yellow {
+	background-color: var(--yellow);
+}
+.background-turquoise {
+	background-color: var(--turquoise);
+}
+.background-white {
+	background-color: var(--white);
+}
+.background-magenta {
+	background-color: var(--magenta);
+}
+.background-red {
+	background-color: var(--red);
+}
+.background-green {
+	background-color: var(--green);
+}
+.background-orange {
+	background-color: var(--orange);
+}
+/* END COLORS */
+
+/* CUSTOM FONTS */
+/**
+ * @license
+ * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: HelveticaLTWXX-Roman by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/helvetica/pro-regular/
+ * Copyright: Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+ * 
+ * 
+ * 
+ * © 2020 MyFonts Incn*/  
+ @font-face {
+	font-family: "SKGoldilocksItalic";
+	src: url('/static/webFonts/SKGoldilocksItalic/font.woff2') format('woff2'), url('/static/webFonts/SKGoldilocksItalic/font.woff') format('woff');
+  }
+  @font-face {
+	font-family: "SKGoldilocksRegular";
+	src: url('/static/webFonts/SKGoldilocksRegular/font.woff2') format('woff2'), url('/static/webFonts/SKGoldilocksRegular/font.woff') format('woff');
+  }
+  @font-face {
+	font-family: "SKGoldilocksMedium";
+	src: url('/static/webFonts/SKGoldilocksMedium/font.woff2') format('woff2'), url('/static/webFonts/SKGoldilocksMedium/font.woff') format('woff');
+  }
+  @font-face {
+	font-family: "SKGoldilocksBold";
+	src: url('/static/webFonts/SKGoldilocksBold/font.woff2') format('woff2'), url('/static/webFonts/SKGoldilocksBold/font.woff') format('woff');
+  }
+  @font-face {
+	font-family: "SKGoldilocksBoldItalic";
+	src: url('/static/webFonts/SKGoldilocksBoldItalic/font.woff2') format('woff2'), url('/static/webFonts/SKGoldilocksBoldItalic/font.woff') format('woff');
+  }
+/* END CUSTOM FONTS */
+
+/* GENERIC STYLING */
+a[href],
+a[href]:visited {
+	color: #000
+}
+
+a[href]:not(:hover) {
+	text-decoration: none;
+}
+
+.secondary-button:hover a {
+    color: #999;
+	text-decoration: none;
+}
+
+.secondary-button:hover {
+    border: 1px solid #999;
+}
+
+body {
+	font-family: "SKGoldilocksRegular";
+	background-color: #fafafa; /* Just to see elements pop out */
+}
+
+.medium-text {
+	font-size: 1.7em;
+}
+
+/* NAV STYLE */
+/* Header Nav */
+header {
+    position: fixed;
+    right: 25px;
+    top: 10px;
+	padding: 20px 20px;
+	z-index: 1000;
+}
+
+nav ul {
+	padding: 0;
+	list-style: none;
+	white-space: nowrap;
+}
+
+nav ul :first-child {
+	margin-left: 0;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav li a {
+	padding: .5em 1em;
+	background-color: #F6F6F6;
+	border-radius: 20px;
+	margin: 0.25em;
+}
+
+nav ul li a:hover {
+	text-decoration: none;
+	background-color: #D8D8D8;
+}
+
+nav li a[href], nav li a[href]:visited,
+button a[href], button a[href]:visited {
+	color: #000;
+}
+
+nav li a[href]:not(:hover),
+button a[href]:not(:hover) {
+	text-decoration: none;
+}
+
+nav li a[data-current="current item"] {
+	background-color: white;
+}
+
+.secondary-button {
+	width: 150px;
+	border: 1px solid black;
+	padding: 0.1em 1.5em;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 20px;
+}
+
+.unavailable-button {
+	width: 150px;
+    border: 1px solid #999;
+    padding: 0.1em 1.5em;
+    background-color: rgba(0,0,0,0);
+    border-radius: 20px;
+    color: #999;
+}
+
+/* Mobile Nav */
+/* Inspired by https://codepen.io/erikterwan/pen/EVzeRP */
+#hamburger {
+  background-color: #D8D8D8;
+  border-radius: 100px;
+}
+
+#hamburger,
+#menuToggle input {
+  display: block;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#menuToggle input {
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+#menuToggle nav {
+  transform: translatex(500px);
+  visibility: hidden;
+  transition: 0.4s ease-in;
+}
+
+#menuToggle input:checked ~ nav
+{
+  transform: translatex(0px);
+  visibility: visible;
+  transition: 0.4s ease-out;
+}
+
+#menuToggle input ~ #hamburger > div span
+{
+  transform: translatex(0px);
+  transition: 0.2s ease-in-out;
+}
+
+#menuToggle input:checked ~ #hamburger > div span:nth-child(1)
+{
+  transform: translatex(5px);
+  transition: 0.2s ease-in-out;
+}
+
+#menuToggle input:checked ~ #hamburger > div span:nth-child(2)
+{
+  transform: translatex(-5px);
+  transition: 0.2s ease-in-out;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 20px;
+  height: 3px;
+  margin: 0 auto;
+  position: relative;
+  background: #000;
+  z-index: 1;
+}
+#menuToggle span:first-child {
+   margin: 0 auto 10px auto;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* END NAV STYLE */
+
+/* ROW STYLES */
+
+.row{
+	padding: 0 50px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.hero-row {
+	height: 70vh;
+}
+
+.height-10vh {
+	height: 10vh;
+}
+
+
+.hero-row h3 {
+	line-height: 1.2em;
+}
+
+/* COLUMN STYLES */
+.col-50 {
+	position: relative;
+	flex-basis: 50%;
+	flex-wrap: wrap;
+}
+.col-40 {
+	position: relative;
+	flex-basis: 40%;
+	flex-wrap: wrap;
+}
+
+.col-33 {
+	position: relative;
+	flex-basis: 33.3%;
+	flex-wrap: wrap;
+}
+
+.col-30 {
+	position: relative;
+	flex-basis: 30%;
+	flex-wrap: wrap;
+}
+
+.col-25 {
+	position: relative;
+	flex-basis: 25%;
+	flex-wrap: wrap;
+}
+
+.col-20 {
+	position: relative;
+	flex-basis: 20%;
+	flex-wrap: wrap;
+}
+.col-10 {
+	position: relative;
+	flex-basis: 10%;
+	flex-wrap: wrap;
+}
+.nowrap {
+	flex-wrap: nowrap !important;
+}
+
+
+/* END COLUMN STYLES */
+
+/* HEADING AND PARAGRAPH STYLES */
+
+.ginormous {
+	font-size: 40vh;
+	line-height: .7em;
+}
+
+h1 {
+	font-family: 'SKGoldilocksMedium';
+	font-size: 6.5em;;
+    line-height: 1.05em;
+	font-weight: 400;
+	letter-spacing: .02em;
+}
+
+@media screen and (max-width: 1070px) {
+	h1 {
+		font-size: 4.2em;
+	}
+}
+
+@media screen and (min-width: 905px) {
+	.hero-row h1 {
+		font-size: 8.5em;
+		letter-spacing: 0em;
+	}
+}
+
+h2 {
+	font-size: 3.5em;
+	font-weight: 400;
+	display: inline-block;
+    padding-left: 10px;
+}
+
+h3 {
+	font-size: 2.5em;
+	font-weight: 400;
+	display: inline-block;
+    padding-left: 10px;
+	letter-spacing: -0.05em;
+}
+@media screen and (max-width: 905px) {
+	h3 {
+		font-size: 1.7em;
+		letter-spacing: 0em;
+	}
+}
+h4 {
+	font-size: 1.5em;
+	font-weight: 400;
+	display: inline-block;
+    padding-left: 10px;
+}
+h5 {
+	font-size: 1.1em;
+	font-weight: 400;
+	display: inline-block;
+    padding-left: 10px;
+}
+
+.show-content {
+	font-size: 1em;
+	font-weight: 400;
+	background-color: #fff;
+	display: inline-block;
+}
+
+/* Fix background showing through */
+/* .show-content {
+	margin: -1px; 
+} */
+
+/* .w-100 {
+	margin: -1px;
+}
+
+.ml-30.mr-30.small.w-100.nowrap {
+    padding: 0 0 0 1px;
+	margin-right: 29px;
+}
+
+.col-20.flex.text-align-right {
+    margin-right: -1px; 
+} */
+/* Fix background showing through */
+
+
+p {
+	padding: 0 10px 0;
+	font-size: 1.1em;
+}
+
+.small {
+	font-size: 0.7em;
+}
+
+/* END HEADING AND PARAGRAPH STYLES */
+
+/* PADDING, MARGIN AND MISC UTILITIES */
+
+.flex {
+	display:flex;
+}
+
+.p-0 {
+	padding: 0 !important;
+}
+.pr-0 {
+	padding-right: 0px;
+}
+.pr-10 {
+	padding-right: 10px;
+}
+.pr-20 {
+	padding-right: 20px;
+}
+.pr-60 {
+	padding-right: 60px;
+}
+.pr-150 {
+	padding-right: 15px;
+}
+.pb-15 {
+	padding-bottom: 15px;
+}
+.pb-60 {
+	padding-bottom: 60px;
+}
+.pt-10 {
+	padding-top: 10px;
+}
+.pt-30 {
+	padding-top: 30px;
+}
+.pt-60 {
+	padding-top: 60px;
+}
+.mt-15 {
+	margin-top: 15px;
+}
+.mt-30 {
+	margin-top: 30px;
+}
+.mt-60 {
+	margin-top: 60px;
+}
+.mb-30 {
+	margin-bottom: 30px;
+}
+.mb-50 {
+	margin-bottom: 50px;
+}
+.pl-30 {
+	padding-left: 30px;
+}
+.ml-30 {
+	margin-left: 30px;
+}
+.ml-40 {
+	margin-left: 40px;
+}
+.pr-30 {
+	padding-right: 30px;
+}
+.mr-30 {
+	margin-right: 30px;
+}
+
+.pr-150 {
+	padding-right: 150px;
+}
+
+.pt-44vh {
+	padding-top: 44vh;
+}
+
+.ml-10 {
+	margin-left: 10px;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.w-75 {
+	width: 75%;
+}
+
+.w-300px {
+	width:300px;
+}
+
+.flex-justify-center {
+	justify-content: center;
+}
+
+.flex-align--self-end {
+	align-self: flex-end;
+}
+
+.flex-align-start {
+	align-items: flex-start;
+}
+
+.flex-align-end {
+	align-items: flex-end;
+}
+
+.flex-align--self-start {
+	align-self: flex-start;
+}
+
+.flex-grow-1 {
+	flex-grow: 1;
+}
+.flex-grow-2 {
+	flex-grow: 2;
+}
+.flex-grow-3 {
+	flex-grow: 3;
+}
+
+.flex-basis-20 {
+	flex-basis:20%;
+}
+.flex-basis-33 {
+	flex-basis:33%;
+}
+.flex-basis-50 {
+	flex-basis:50%;
+}
+.flex-shrink-0 {
+	flex-shrink: 0;
+}
+
+.absolute-bottom {
+	position: absolute;
+	bottom: 0;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.bottom-10 {
+	bottom: 10px
+}
+.right-10 {
+	right: 10px
+}
+
+.h-200vh {
+	height:200vh;
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+.height-vh-100 {
+	height:100vh;
+}
+
+span.line {
+	height:1px;
+	background-color:#000;
+	top: 1.4em;
+    left: 5px;
+    width: 175%;
+    z-index: 10;
+}
+
+@media screen and (min-width: 768px) {
+	span.line {
+		width: 145%;
+	}
+}
+
+span.line-top {
+	height: 1px;
+    background-color: #000;
+    top: 18px;
+    width: 100%;
+    z-index: 10;
+}
+
+.relative {
+	position: relative;
+}
+
+/* END PADDING, MARGIN AND MISC UTILITIES */
+
+/* RANDOM STUFF */
+
+.background-white {
+	background-color: #fff;
+}
+
+/* This keeps small svg icons in line */
+li a svg,
+svg {
+    display: inline;
+    width: unset;
+}
+
+.hero-row svg {
+	width: 100%;
+}
+
+/* This removes the arrow from details buttons */
+details > summary {
+	list-style: none;
+}
+
+/* Styling the conditions in the hero row */
+
+.conditions {
+	position: absolute; 
+	bottom: -110px;
+}
+
+@media only screen and (min-width:936px) {
+	.conditions {
+		bottom: -50px;
+	}
+}
+
+
+
+/* TABLE STYLES */
+.showtimes-table div.flex-grow-3 {
+	justify-content: flex-end;
+    display: flex;
+}
+
+.showtimes-table div.flex-grow-3 button {
+	align-self: flex-start;
+}
+
+/* Footer styles */
+.footer img,
+.showtimes-table .flex img {
+	display: unset;
+	-o-object-fit: contain;
+	   object-fit: contain;
+	-o-object-position: unset;
+	   object-position: unset;
+}
+
+.showtimes-table div {
+	align-items: flex-start;
+}
+
+.footer .col-25 {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.sticky-footer {
+	position: -webkit-sticky;
+	position: sticky;
+    bottom: 0;
+    height: 500px;
+    z-index: -1;
+}
+
+.footer .col-25 {
+	align-content: flex-start;
+}
+
+.footer .small {
+	padding: 0;
+}
+
+.footer .w-100 {
+	min-height:80px;
+}
+
+.footer .align-items-center {
+	align-items: center;
+}
+
+.square {
+	height:100px;
+	width:100px;
+	display: flex;
+    align-items: center;
+}
+
+.square svg,
+.square img {
+	-o-object-fit: contain;
+	   object-fit: contain;
+    width: 100%;
+}
+
+/* MOBILE STYLES */
+
+@media screen and (min-width: 769px) {
+	.desktop-none {
+		display:none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 3.9em;
+	}
+	.nowrap {
+		flex-wrap: wrap !important
+	}
+	.hero-row {
+		height: 100vh;
+	}
+	.mobile-none {
+		display:none;
+	}
+	.hero-row > div {
+		flex-basis: 100%;
+	}
+	.hero-row > div:nth-child(2) {
+		padding-bottom: 60px;
+	}
+	.hero-row > div:first-child {
+		order: 1
+	}
+	.hero-row > div:nth-child(2) {
+		order: 3
+	}
+	.hero-row > div:last-child {
+		order: 2
+	}
+	.partners {
+		height: 40vh;
+	}
+	.sticky-title-container {
+		height: 50vh;;
+		position: -webkit-sticky;;
+		position: sticky;
+		top: 0;
+		align-items: center;
+		display: flex
+	}
+	.sticky-title {
+		width: 100%;
+		padding-top: 0;
+	}
+	.pt-44vh {
+		padding-top: 60px;
+	}
+	.col-50 {
+		flex-basis: 100%;
+	}
+	.col-33 {
+		flex-basis: 50%
+	}
+	.sticky {
+		position: relative;
+	}
+	.show-row > div:nth-of-type(1) {
+		order: 1;
+	}
+	.show-row > div:nth-of-type(3) {
+		order: 2;
+	}
+	.show-row > div:nth-of-type(2) {
+		order: 3;
+	}
+	.show-row > div:nth-of-type(5) {
+		order: 4;
+	}
+	.show-row > div:nth-of-type(4) {
+		order: 5;
+	}
+	.mobile-h-100 {
+		height:100%;
+	}
+	.row-text-content div:nth-of-type(1) {
+		flex-basis: 100%;
+	}
+	.row-text-content div:nth-of-type(4) {
+		flex-basis: 100%;
+		justify-content: center;
+		margin-top: 20px;
+	}
+	h5 {
+		font-size: 1.5em;
+		padding: 0 0 10px 0;
+	}
+	.row-text-content button {
+		width: 100%;
+		padding: 3px 10px;;
+	}
+
+	.row-text-content {
+		padding-left: 20px;
+	}
+	.square {
+		height: auto;
+	}
+	.footer .w-100 {
+		min-height: auto;
+	}
+	
+	.footer .col-25 {
+		flex-basis: 100%;
+		padding-top: 25px;
+	}
+	.sticky-footer {
+		position: relative;
+		bottom: auto;
+		height: auto;
+		z-index: auto;
+	}
+	.showtimes-table div {
+		justify-content: space-between;
+	}
+	.col-20 {
+		flex-basis: auto;
+	}
+	.mobile-flex-shrink-0 {
+		flex-shrink: 0
+	}
+}
+
+
+/* Misc changes */
+
+.credits-logo img {
+	width: 100px;
+	height: auto;
+}
+
+.mobile-h-100 {
+	height: 100px;
+	width: 100px;
+	min-width: 80px;
+}
+
+.no-scale {
+	width: auto;
+	height: auto;
+}
+
+main { /* Make footer links clickable */
+	z-index: -10;
+	width: 100%;
+    /* position: relative; */
+	/* overflow-x: hidden; */
+}
+
+body { /* Make Hero Row links clickable */
+	position: relative;
+    z-index: -10;
+	width: 100%;
+	overflow-x: hidden; /* Solves mobile overflow issue */
+}
+
+html { /* Smooth scrolling on anchor links */
+    scroll-behavior: smooth;
+	overflow-x: hidden; /* Solves mobile overflow issue */
+}
+
+.show-row li {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.show-row nav ul :first-child {
+	margin: 0.25em;
+}
+
+.show-row nav ul li {
+	margin-left: 0 !important;
+}
