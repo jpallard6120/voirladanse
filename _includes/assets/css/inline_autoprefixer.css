@@ -717,7 +717,7 @@ svg {
 
 /* This removes the arrow from details buttons */
 details > summary {
-	list-style: none;
+	list-style: none !important;
 }
 
 /* Styling the conditions in the hero row */
