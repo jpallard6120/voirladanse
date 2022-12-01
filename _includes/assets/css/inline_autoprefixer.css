@@ -147,6 +147,11 @@ a[href]:not(:hover) {
 	text-decoration: none;
 }
 
+a[href]:hover {
+    text-decoration: none;
+    color: #696969;
+}
+
 .secondary-button:hover a {
     color: #999;
 	text-decoration: none;
@@ -169,8 +174,8 @@ body {
 /* Header Nav */
 header {
     position: fixed;
-    right: 25px;
-    top: 10px;
+    right: 8px;
+    top: 8px;
 	padding: 20px 20px;
 	z-index: 1000;
 }
@@ -315,9 +320,15 @@ nav li a[data-current="current item"] {
 /* ROW STYLES */
 
 .row{
-	padding: 0 50px;
+	padding: 0 30px;
 	display: flex;
 	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+	.row{
+		padding: 0 16px;
+	}
 }
 
 .hero-row {
@@ -413,10 +424,11 @@ h2 {
 	font-weight: 400;
 	display: inline-block;
     padding-left: 10px;
+	line-height: 1.15em;
 }
 
 h3 {
-	font-size: 2.5em;
+	font-size: 2.1em;
 	font-weight: 400;
 	display: inline-block;
     padding-left: 10px;
@@ -650,9 +662,12 @@ p {
 	text-align: right;
 }
 
-.height-vh-100 {
-	height:100vh;
+@media screen and (min-width: 768px){
+	.height-vh-100 {
+		height:100vh;
+	}
 }
+
 
 span.line {
 	height:1px;
@@ -753,7 +768,7 @@ details > summary {
 	position: -webkit-sticky;
 	position: sticky;
     bottom: 0;
-    height: 500px;
+    height: 600px;
     z-index: -1;
 }
 
@@ -938,6 +953,7 @@ details > summary {
 main { /* Make footer links clickable */
 	z-index: -10;
 	width: 100%;
+	position: absolute;
     /* position: relative; */
 	/* overflow-x: hidden; */
 }
@@ -977,4 +993,10 @@ html { /* Smooth scrolling on anchor links */
 
 body {
 	scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 768px){
+	.row-text-content > div {
+		padding-left: 15px;
+	}
 }
