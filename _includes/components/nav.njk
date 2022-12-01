@@ -1,9 +1,15 @@
 <nav class="mobile-none">
   <ul>
     <li>
+      {% if page.url == '/en/' %}
+      <a href="/">Fr</a>
+      <a href="https://voirladanse.tuxedobillet.com/">Tickets</a>
+      <a href="#programmation">Calendar</a>
+      {% else %}
       <a href="/en">En</a>
-      <a href="#">Billetterie</a>
+      <a href="https://voirladanse.tuxedobillet.com/">Billetterie</a>
       <a href="#programmation">Calendrier</a>
+      {% endif %}
     </li>
   </ul>
 </nav>
@@ -19,9 +25,15 @@
   <nav style="padding-right: 35px;">
     <ul>
       <li>
-        <a href="/en">En</a>
-        <a href="#">Billetterie</a>
-        <a href="#programmation">Calendrier</a>
+      {% if page.url == '/en/' %}
+      <a href="/">Fr</a>
+      <a href="https://voirladanse.tuxedobillet.com/">Tickets</a>
+      <a href="#programmation">Calendar</a>
+      {% else %}
+      <a href="/en">En</a>
+      <a href="https://voirladanse.tuxedobillet.com/">Billetterie</a>
+      <a href="#programmation">Calendrier</a>
+      {% endif %}
       </li>
     </ul>
   </nav>
