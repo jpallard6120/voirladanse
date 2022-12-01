@@ -354,11 +354,11 @@ partnersData_Tangente:
 {# PROGRAMMATION #}
 <div id="programmation" class="row p-0 flex-align-start background-white">
   <h2 class="ml-30 mr-30 pt-60 w-100">
-    Calendrier des spectacles
+    Calendar
   </h2>
   <div class="col-33 ml-30">
     <p>
-      Sélectionnez deux spectacles parmi l’offre alléchante de huit spectacles pour le prix de <strong>50&nbsp;$*</strong>
+      Choose two shows from the eight shows below for only <strong>50&nbsp;$*</strong>
     </p>
   </div>
 
@@ -394,11 +394,11 @@ partnersData_Tangente:
         <div class="flex-grow-3">
           {% if collections.show_availability[0].data.tangente_never_not %}
           <button class="secondary-button">
-            <a href="#">Sélectionner</a>
+            <a href="{{partnersData_Tangente.buyButton}}">Select</a>
           </button>
           {% else %}
           <button class="unavailable-button">
-            Complet
+            Sold out
           </button>
           {% endif %}
         </div>
@@ -432,11 +432,11 @@ partnersData_Tangente:
         <div class="flex-grow-3">
           {% if collections.show_availability[0].data.agora_jolies_choses %}
           <button class="secondary-button">
-            <a href="#">Sélectionner</a>
+            <a href="{{partnersData_Agora.buyButton}}">Select</a>
           </button>
           {% else %}
           <button class="unavailable-button">
-            Complet
+            Sold out
           </button>
           {% endif %}
         </div>
@@ -472,11 +472,11 @@ partnersData_Tangente:
         <div class="flex-grow-3">
           {% if collections.show_availability[0].data.danse_danse_colossus %}
           <button class="secondary-button">
-            <a href="#">Sélectionner</a>
+            <a href="{{partnersData_DanseDanse.buyButton}}">Select</a>
           </button>
           {% else %}
           <button class="unavailable-button">
-            Complet
+            Sold out
           </button>
           {% endif %}
         </div>
@@ -508,11 +508,11 @@ partnersData_Tangente:
         <div class="flex-grow-3">
           {% if collections.show_availability[0].data.rotonde_mefier %}
           <button class="secondary-button">
-            <a href="#">Sélectionner</a>
+            <a href="{{partnersData_Rotonde.buyButton}}">Select</a>
           </button>
           {% else %}
           <button class="unavailable-button">
-            Complet
+            Sold out
           </button>
           {% endif %}
         </div>
@@ -547,11 +547,11 @@ partnersData_Tangente:
         <div class="flex-grow-3">
           {% if collections.show_availability[0].data.tangente_100lux %}
           <button class="secondary-button">
-            <a href="#">Sélectionner</a>
+            <a href="{{partnersData_Tangente.buyButton_1}}">Select</a>
           </button>
           {% else %}
           <button class="unavailable-button">
-            Complet
+            Sold out
           </button>
           {% endif %}
         </div>
@@ -583,11 +583,11 @@ partnersData_Tangente:
         <div class="flex-grow-3">
           {% if collections.show_availability[0].data.rotonde_efer %}
           <button class="secondary-button">
-            <a href="#">Sélectionner</a>
+            <a href="{{partnersData_Rotonde.buyButton_1}}">Select</a>
           </button>
           {% else %}
           <button class="unavailable-button">
-            Complet
+            Sold out
           </button>
           {% endif %}
         </div>
@@ -625,11 +625,11 @@ partnersData_Tangente:
         <div class="flex-grow-3">
           {% if collections.show_availability[0].data.reckless %}
           <button class="secondary-button">
-            <a href="#">Sélectionner</a>
+            <a href="{{partnersData_DanseDanse.buyButton_1}}">Select</a>
           </button>
           {% else %}
           <button class="unavailable-button">
-            Complet
+            Sold out
           </button>
           {% endif %}
         </div>
@@ -662,11 +662,11 @@ partnersData_Tangente:
         <div class="flex-grow-3">
           {% if collections.show_availability[0].data.agora_goddam %}
           <button class="secondary-button">
-            <a href="#">Sélectionner</a>
+            <a href="{{partnersData_Agora.buyButton_1}}">Select</a>
           </button>
           {% else %}
           <button class="unavailable-button">
-            Complet
+            Sold out
           </button>
           {% endif %}
         </div>
@@ -695,7 +695,7 @@ partnersData_Tangente:
     <div class="col-25">
       <div class="w-100 flex align-items-center">
         <div class="square">
-          <a href="https://agoradanse.com/">
+          <a href="https://agoradanse.com/en">
             <img src="{{partnersData_Agora.logo}}" alt="I'm an image" width="100" height="100">
           </a>
         </div>
@@ -711,7 +711,7 @@ partnersData_Tangente:
     <div class="col-25">
       <div class="w-100 flex align-items-center">
         <div class="square">
-          <a href="https://www.dansedanse.ca/">
+          <a href="https://www.dansedanse.ca/en">
             <img src="{{partnersData_DanseDanse.logo}}" alt="I'm an image" width="100" height="100">
           </a>  
           </div>
@@ -727,7 +727,7 @@ partnersData_Tangente:
     <div class="col-25">
       <div class="w-100 flex align-items-center">
         <div class="square">
-          <a href="https://www.larotonde.qc.ca/">
+          <a href="https://www.larotonde.qc.ca/en">
             <img src="{{partnersData_Rotonde.logo}}" alt="I'm an image" width="100" height="100">
           </a>
         </div>
@@ -743,7 +743,7 @@ partnersData_Tangente:
     <div class="col-25">
       <div class="w-100 flex align-items-center">
         <div class="square">
-          <a href="https://tangentedanse.ca/">
+          <a href="https://tangentedanse.ca/en">
             <img src="{{partnersData_Tangente.logo}}" alt="I'm an image" width="100" height="100">
           </a>
         </div>
@@ -761,25 +761,25 @@ partnersData_Tangente:
   <div class=" row w-100 pt-60">
     <div class="col-25">
       <p class="small">
-        <strong>Billetterie générale</strong><br>
+        <strong>Tickets Information</strong><br>
         514-525-1500<br>
         info@voirladanse.ca<br>
       </p>
     </div>
     <div class="col-25">
       <p class="small">
-        <strong>
-        *Offre d'une durée limitée.<br></strong>
-        Nombre de forfaits limité.<br>
-        Non cumulable avec toute autre offre promotionnelle.<br>
-        Obligations de choisir deux (2) spectacles distincts.
+        <strong>Conditions</strong><br>
+        Limited time offer.<br>
+        Limited number of packages.<br>
+        Cannot be combined with any other promotional offer.<br>
+        Must select two (2) separate shows.
       </p>
     </div>
     <div class="col-25">
     </div>
     <div class="col-25 nowrap">
       <img class="no-scale mb-15" style="height:41px;" src="/static/img/logos_partenaires/Calq_smallish.png" alt="I'm an image" width="100" height="41">
-      <p class="small"> Les diffuseurs en danse remercient le Conseil des arts et des lettres du Québec de son appui financier.</p>
+      <p class="small"> We appreciate the financial support from le Conseil des arts et des lettres du Québec.</p>
     </div>
   </div>
   <div class=" row w-100 pt-60">
@@ -787,7 +787,7 @@ partnersData_Tangente:
        <p class="small">
         <a href="https://paprika.com/">Design: Paprika</a>
         <br>
-        <a href="https://jpallard.com/">Développement: JPAllard</a>
+        <a href="https://jpallard.com/">Development: JPAllard</a>
       </p>
     </div>
     <div class="col-25">
