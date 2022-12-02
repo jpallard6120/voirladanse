@@ -202,7 +202,13 @@
             <div class="absolute bottom-10 right-10 credits-logo">
               {% if logo2_1 %}
                 <img src="{{logo2_1}}" alt="I'm a logo" width="100" height="100">
-                <p class="small pt-30">Partenaire de spectacle</p>
+                <p class="small pt-30">
+                  {% if page.url == '/en/' %}
+                  Performance partner
+                  {% else %}
+                  Partenaire de spectacle
+                  {% endif %}
+                  </p>
               {% endif %}
               <img src="{{logo_1}}" alt="I'm a logo" width="100" height="100">
             </div>

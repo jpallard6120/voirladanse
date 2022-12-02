@@ -7,6 +7,7 @@
     {% include "assets/css/inline_autoprefixer.css" %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
+  {% include 'components/gtm.njk' %}
   {# {% set js %}
     {% include "assets/js/inline.js" %}
   {% endset %}
