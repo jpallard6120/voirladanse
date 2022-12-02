@@ -894,8 +894,11 @@ details > summary {
 		justify-content: center;
 		margin-top: 20px;
 	}
-	h5 {
+	h4 {
 		font-size: 1.5em;
+	}
+	h5 {
+		font-size: 1.2em;
 		padding: 0 0 10px 0;
 	}
 	.row-text-content button {
