@@ -1006,3 +1006,20 @@ body {
 		padding-left: 15px;
 	}
 }
+
+
+.disabled-2 {
+    background-color: #696969;
+    color: #eee !important;
+	pointer-events: none;
+}
+
+.disabled-2 svg {
+	display: none;
+}
+
+.disabled-2:hover {
+    background-color: #696969;
+    color: #eee !important;
+	pointer-events: none;
+}
