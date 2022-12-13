@@ -88,12 +88,70 @@
       <nav class="ml-30 mt-15 mb-50">
         <ul>
           <li>
-            <a href="{{buyButton}}">
-            {# <a href="{{buyButton}}" class="disabled-2"> #}
-              {% if page.url == '/en/' %}
-              Buy now
-              {% else %}
-              Acheter maintenant 
+              {% if 'Agora' in title %}
+                {% if not collections.show_availability[0].data.agora_jolies_choses %}
+                  <a href="{{buyButton}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
+                {% else %}
+                  <a href="{{buyButton}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
+                {% endif %}
+              {% elif 'Danse Danse' in title %}
+                {% if not collections.show_availability[0].data.danse_danse_colossus %}
+                  <a href="{{buyButton}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
+                {% else %}
+                  <a href="{{buyButton}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
+                {% endif %}
+              {% elif 'La Rotonde' in title %}
+                {% if not collections.show_availability[0].data.rotonde_mefier %}
+                  <a href="{{buyButton}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
+                {% else %}
+                  <a href="{{buyButton}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
+                {% endif %}
+              {% elif 'Tangente' in title %}
+                {% if not collections.show_availability[0].data.tangente_never_not %}
+                  <a href="{{buyButton}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
+                {% else %}
+                  <a href="{{buyButton}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
+                {% endif %}
               {% endif %}
               <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2134 1.81351H11.1373V0.625H15.4307H16.027V1.21926V5.4979H14.8344V2.86494L10.5939 6.87955L9.77246 6.01787L14.2134 1.81351Z" fill="#696969"/>
@@ -220,11 +278,70 @@
       <nav class="ml-30 mt-15 mb-50">
         <ul>
           <li>
-            <a href="{{buyButton_1}}">
-              {% if page.url == '/en/' %}
-                Buy now
-              {% else %}
-                Acheter maintenant 
+              {% if 'Agora' in title %}
+                {% if not collections.show_availability[0].data.agora_goddam %}
+                  <a href="{{buyButton_1}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
+                {% else %}
+                  <a href="{{buyButton_1}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
+                {% endif %}
+              {% elif 'Danse Danse' in title %}
+                {% if not collections.show_availability[0].data.reckless %}
+                  <a href="{{buyButton_1}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
+                {% else %}
+                  <a href="{{buyButton_1}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
+                {% endif %}
+              {% elif 'La Rotonde' in title %}
+                {% if not collections.show_availability[0].data.rotonde_efer %}
+                  <a href="{{buyButton_1}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
+                {% else %}
+                  <a href="{{buyButton_1}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
+                {% endif %}
+              {% elif 'Tangente' in title %}
+                {% if not collections.show_availability[0].data.tangente_100lux %}
+                  <a href="{{buyButton_1}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
+                {% else %}
+                  <a href="{{buyButton_1}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
+                {% endif %}
               {% endif %}
               <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2134 1.81351H11.1373V0.625H15.4307H16.027V1.21926V5.4979H14.8344V2.86494L10.5939 6.87955L9.77246 6.01787L14.2134 1.81351Z" fill="#696969"/>

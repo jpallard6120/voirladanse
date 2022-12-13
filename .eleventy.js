@@ -47,9 +47,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("show_availability", function(collection) {
     return collection.getFilteredByGlob("show_availability/*.md");
   });
-  eleventyConfig.addCollection("pages", function(collection) {
-    return collection.getFilteredByGlob("pages/*.njk");
-  });
 
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {
