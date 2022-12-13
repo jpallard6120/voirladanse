@@ -201,6 +201,11 @@ nav li a {
 	margin: 0.25em;
 }
 
+.show-row nav li a {
+	display: flex;
+    align-items: center;
+}
+
 nav ul li a:hover {
 	text-decoration: none;
 	background-color: #D8D8D8;

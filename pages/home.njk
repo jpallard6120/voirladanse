@@ -349,10 +349,18 @@ partnersData_Tangente:
 {# END PARTNERS 4 COL ROW #}
 
 {# THIS RENDERS EACH SECTION ACCORDING TO FRONT MATTER DATA #}
-{% renderFile "_includes/layouts/section_layout.njk", partnersData_Agora %}
-{% renderFile "_includes/layouts/section_layout.njk", partnersData_DanseDanse %}
-{% renderFile "_includes/layouts/section_layout.njk", partnersData_Rotonde %}
-{% renderFile "_includes/layouts/section_layout.njk", partnersData_Tangente %}
+{% renderFile "_includes/layouts/section_layout.njk", {partnerData: partnersData_Agora, 
+                                                      show1_available: collections.show_availability[0].data.agora_jolies_choses, 
+                                                      show2_available: collections.show_availability[0].data.agora_goddam} %}
+{% renderFile "_includes/layouts/section_layout.njk", {partnerData: partnersData_DanseDanse, 
+                                                      show1_available: collections.show_availability[0].data.danse_danse_colossus, 
+                                                      show2_available: collections.show_availability[0].data.reckless} %}
+{% renderFile "_includes/layouts/section_layout.njk", {partnerData: partnersData_Rotonde, 
+                                                      show1_available: collections.show_availability[0].data.rotonde_mefier, 
+                                                      show2_available: collections.show_availability[0].data.rotonde_efer} %}
+{% renderFile "_includes/layouts/section_layout.njk", {partnerData: partnersData_Tangente, 
+                                                      show1_available: collections.show_availability[0].data.tangente_never_not, 
+                                                      show2_available: collections.show_availability[0].data.tangente_100lux} %}
 
 {# PROGRAMMATION #}
 <div id="programmation" class="row p-0 flex-align-start background-white">

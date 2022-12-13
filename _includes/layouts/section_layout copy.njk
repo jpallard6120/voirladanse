@@ -1,60 +1,60 @@
-<div id="{{partnerData.color}}" class="row show-row p-0 flex-align-start background-{{partnerData.color}}">
+<div id="{{color}}" class="row show-row p-0 flex-align-start background-{{color}}">
     <div class="absolute h-200vh w-100 sticky-title-container">
-    <h1 class="pt-30 pr-60 ml-30 w-50 sticky sticky-partnerData.title">{{partnerData.title}}</h1>
+    <h1 class="pt-30 pr-60 ml-30 w-50 sticky sticky-title">{{title}}</h1>
     </div>
     <div class="col-50 flex pt-44vh">
-      {% if partnerData.title2 %}
+      {% if title2 %}
       <div class="w-100">
-        <h2 class="ml-30 mr-30 pr-10 background-white">{{partnerData.title2}}</h2>
+        <h2 class="ml-30 mr-30 pr-10 background-white">{{title2}}</h2>
       </div>
       {% endif %}
       <div class="w-100">
-        <h3 class="ml-30 mr-30 pr-10 background-white">{{partnerData.author}}</h3>
+        <h3 class="ml-30 mr-30 pr-10 background-white">{{author}}</h3>
       </div>
-      {% if partnerData.author2 %}
+      {% if author2 %}
         <div class="w-100">
-        <h3 class="ml-30 mr-30 pr-10 background-white">{{partnerData.author2}}</h3>
+        <h3 class="ml-30 mr-30 pr-10 background-white">{{author2}}</h3>
       </div>
       {% endif %}
       <div class="w-100">
-        <p class="ml-30 mr-30 show-content pr-10 pt-10">{{partnerData.description | safe}}</p>
+        <p class="ml-30 mr-30 show-content pr-10 pt-10">{{description | safe}}</p>
       </div>
       <div class="show-content ml-30 mr-30 w-100" style="height:1em;"></div> {# This is just a spacer #}
       <div class="flex w-100">
         <div class="col-40 flex mobile-flex-shrink-0">
           <p class="ml-30 pr-0 show-content w-100 relative">
-            {{partnerData.date1}}
+            {{date1}}
             <span class="line absolute"></span>
           </p>
           <p class="ml-30 pr-0 show-content w-100 relative">
-            {{partnerData.date2}}
+            {{date2}}
             <span class="line absolute"></span>
           </p>
-          {% if partnerData.date3 %}
+          {% if date3 %}
           <p class="ml-30 pr-0 show-content w-100 relative">
-            {{partnerData.date3}}
+            {{date3}}
             <span class="line absolute"></span>
           </p>
           {% endif %}
-          {% if partnerData.date4 %}
+          {% if date4 %}
           <p class="ml-30 pr-0 show-content w-100 relative">
-            {{partnerData.date4}}
+            {{date4}}
             <span class="line absolute"></span>
           </p>
           {% endif %}
         </div>
         <div class="col-20 flex text-align-right">
-          <p class="show-content w-100 pr-30">{{partnerData.time1}}</p>
-          <p class="show-content w-100 pr-30">{{partnerData.time2}}</p>
-          <p class="show-content w-100 pr-30">{{partnerData.time3}}</p>
-          {% if partnerData.time4 %}
-            <p class="show-content w-100 pr-30">{{partnerData.time4}}</p>
+          <p class="show-content w-100 pr-30">{{time1}}</p>
+          <p class="show-content w-100 pr-30">{{time2}}</p>
+          <p class="show-content w-100 pr-30">{{time3}}</p>
+          {% if time4 %}
+            <p class="show-content w-100 pr-30">{{time4}}</p>
           {% endif %}
         </div>
         <div class="col-40 flex">
-          <p class="mr-30 show-content w-100">{{partnerData.duration}}</p>
+          <p class="mr-30 show-content w-100">{{duration}}</p>
           <p class="mr-30 show-content w-100">&nbsp;</p>
-          <p class="small mr-30 show-content w-100">{{partnerData.location}}</p>
+          <p class="small mr-30 show-content w-100">{{location}}</p>
         </div>
       </div>
       <div class="show-content ml-30 mr-30 w-100" style="height:1em;"></div> {# This is just a spacer #}
@@ -75,12 +75,12 @@
           </summary>
           <div class="relative">
             <p class="credit-details w-100 show-content pb-15 pr-150">
-              {% for credit in credits %}
-                {{partnerData.credit | safe}}<br>
+              {%for credit in credits %}
+                {{credit | safe}}<br>
               {% endfor %}
               </p>
             <div class="absolute bottom-10 right-10 credits-logo">
-              <img src="{{partnerData.logo}}" alt="I'm a logo" width="100" height="100">
+              <img src="{{logo}}" alt="I'm a logo" width="100" height="100">
             </div>
           </div>
           </details>
@@ -88,19 +88,69 @@
       <nav class="ml-30 mt-15 mb-50">
         <ul>
           <li>
-            
-            <a href="{{partnerData.buyButton}}" {% if not show1_available %}class="disabled-2"{% endif %}>
-              {% if show1_available %}
-                {% if page.url == '/en/' %}
-                Buy now
+              {% if 'Agora' in title %}
+                {% if not collections.show_availability[0].data.agora_jolies_choses %}
+                  <a href="{{buyButton}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
                 {% else %}
-                Acheter maintenant 
+                  <a href="{{buyButton}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
                 {% endif %}
-              {% else %}
-                {% if page.url == '/en/' %}
-                Sold out
+              {% elif 'Danse Danse' in title %}
+                {% if not collections.show_availability[0].data.danse_danse_colossus %}
+                  <a href="{{buyButton}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
                 {% else %}
-                Complet
+                  <a href="{{buyButton}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
+                {% endif %}
+              {% elif 'La Rotonde' in title %}
+                {% if not collections.show_availability[0].data.rotonde_mefier %}
+                  <a href="{{buyButton}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
+                {% else %}
+                  <a href="{{buyButton}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
+                {% endif %}
+              {% elif 'Tangente' in title %}
+                {% if not collections.show_availability[0].data.tangente_never_not %}
+                  <a href="{{buyButton}}">
+                  {% if page.url == '/en/' %}
+                  Buy now
+                  {% else %}
+                  Acheter maintenant 
+                  {% endif %}
+                {% else %}
+                  <a href="{{buyButton}}" class="disabled-2">
+                  {% if page.url == '/en/' %}
+                  Sold out
+                  {% else %}
+                  Complet
+                  {% endif %}
                 {% endif %}
               {% endif %}
               <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +158,7 @@
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9.94023 0.625H1.56232C0.699474 0.625 0 1.3202 0 2.17778V3.13328C0 3.46314 0.269054 3.73056 0.60095 3.73056C1.78361 3.73056 2.77984 4.72566 2.77984 6C2.77984 7.27434 1.78361 8.26944 0.60095 8.26944C0.269054 8.26944 0 8.625 0 8.86672V9.82222C0 10.6798 0.699474 11.375 1.56232 11.375H14.465C15.3278 11.375 16.0273 10.6798 16.0273 9.82222V6.79167H14.8255V9.82222C14.8255 10.0201 14.6641 10.1806 14.465 10.1806H1.56232C1.3632 10.1806 1.20178 10.0201 1.20178 9.82222V9.40967C2.79598 9.11802 3.98162 7.68619 3.98162 6C3.98162 4.31381 2.79598 2.88198 1.20178 2.59034V2.17778C1.20178 1.97988 1.3632 1.81944 1.56232 1.81944H9.94023V0.625Z" fill="#696969"/>
               </svg>
               </a>
-            <a href="{{partnerData.infoButton}}">
+            <a href="{{infoButton}}">
               {% if page.url == '/en/' %}
                 More info
               {% else %}
@@ -125,66 +175,66 @@
   </div>
   <div class="col-50 flex sticky height-vh-100">
     <picture>
-      <source srcset="{{partnerData.webp_image}}" type="image/webp">
-      <img src="{{partnerData.fallback_image}}" width="1200" height="1800" loading="lazy" decoding="async">
+      <source srcset="{{webp_image}}" type="image/webp">
+      <img src="{{fallback_image}}" width="1200" height="1800" loading="lazy" decoding="async">
     </picture>
   </div>
   <div class="col-50 flex">
     <div class="w-100">
-      <h2 class="ml-30 mr-30 pr-10 mt-60 background-white">{{partnerData.title_1}}</h2>
+      <h2 class="ml-30 mr-30 pr-10 mt-60 background-white">{{title_1}}</h2>
     </div>
-    {% if partnerData.title2_1 %}
+    {% if title2_1 %}
     <div class="w-100">
-      <h3 class="ml-30 mr-30 pr-10 background-white">{{partnerData.title2_1}}</h3><br>
+      <h3 class="ml-30 mr-30 pr-10 background-white">{{title2_1}}</h3><br>
     </div>
     {% endif %}
     <div class="w-100">
-      <h3 class="ml-30 mr-30 pr-10 background-white">{{partnerData.author_1}}</h3>
+      <h3 class="ml-30 mr-30 pr-10 background-white">{{author_1}}</h3>
     </div>
-      {% if partnerData.author2_1 %}
+      {% if author2_1 %}
         <div class="w-100">
-        <h3 class="ml-30 mr-30 pr-10 background-white">{{partnerData.author2_1}}</h3>
+        <h3 class="ml-30 mr-30 pr-10 background-white">{{author2_1}}</h3>
       </div>
       {% endif %}
     <div class="w-100">
-      <p class="ml-30 mr-30 show-content pr-10 pt-10">{{partnerData.description_1 | safe }}</p>
+      <p class="ml-30 mr-30 show-content pr-10 pt-10">{{description_1 | safe }}</p>
     </div>
       <div class="show-content ml-30 mr-30 w-100" style="height:1em;"></div> {# This is just a spacer #}
       <div class="flex w-100">
         <div class="col-40 flex mobile-flex-shrink-0">
           <p class="ml-30 pr-0 show-content w-100 relative">
-            {{partnerData.date1_1}}
+            {{date1_1}}
             <span class="line absolute"></span>
           </p>
           <p class="ml-30 pr-0 show-content w-100 relative">
-            {{partnerData.date2_1}}
+            {{date2_1}}
             <span class="line absolute"></span>
           </p>
-          {% if partnerData.date3_1 %}
+          {% if date3_1 %}
           <p class="ml-30 pr-0 show-content w-100 relative">
-            {{partnerData.date3_1}}
+            {{date3_1}}
             <span class="line absolute"></span>
             </p>
           {% endif %}
-          {% if partnerData.date4_1 %}
+          {% if date4_1 %}
           <p class="ml-30 pr-0 show-content w-100 relative">
-            {{partnerData.date4_1}}
+            {{date4_1}}
             <span class="line absolute"></span>
           </p>
           {% endif %}
         </div>
         <div class="col-20 flex text-align-right">
-          <p class="show-content w-100 pr-30">{{partnerData.time1_1}}</p>
-          <p class="show-content w-100 pr-30">{{partnerData.time2_1}}</p>
-          <p class="show-content w-100 pr-30">{{partnerData.time3_1}}</p>
-          {% if partnerData.time4_1 %}
-            <p class="show-content w-100 pr-30">{{partnerData.time3_1}}</p>
+          <p class="show-content w-100 pr-30">{{time1_1}}</p>
+          <p class="show-content w-100 pr-30">{{time2_1}}</p>
+          <p class="show-content w-100 pr-30">{{time3_1}}</p>
+          {% if time4_1 %}
+            <p class="show-content w-100 pr-30">{{time3_1}}</p>
           {% endif %}
         </div>
         <div class="col-40 flex">
-          <p class="mr-30 show-content w-100">{{partnerData.duration_1}}</p>
+          <p class="mr-30 show-content w-100">{{duration_1}}</p>
           <p class="mr-30 show-content w-100">&nbsp;</p>
-          <p class="small mr-30 show-content w-100">{{partnerData.location_1}}</p>
+          <p class="small mr-30 show-content w-100">{{location_1}}</p>
         </div>
       </div>
       <div class="show-content ml-30 mr-30 w-100" style="height:1em;"></div> {# This is just a spacer #}
@@ -206,12 +256,12 @@
           <div class="relative">
             <p class="credit-details w-100 show-content pb-15 pr-150">
               {%for credit_1 in credits_1 %}
-                {{partnerData.credit_1}}<br>
+                {{credit_1}}<br>
               {% endfor %}
             </p>
             <div class="absolute bottom-10 right-10 credits-logo">
-              {% if partnerData.logo2_1 %}
-                <img src="{{partnerData.logo2_1}}" alt="I'm a logo" width="100" height="100">
+              {% if logo2_1 %}
+                <img src="{{logo2_1}}" alt="I'm a logo" width="100" height="100">
                 <p class="small pt-30">
                   {% if page.url == '/en/' %}
                   Performance partner
@@ -220,7 +270,7 @@
                   {% endif %}
                   </p>
               {% endif %}
-              <img src="{{partnerData.logo_1}}" alt="I'm a logo" width="100" height="100">
+              <img src="{{logo_1}}" alt="I'm a logo" width="100" height="100">
             </div>
           </div>
           </details>
@@ -228,64 +278,64 @@
       <nav class="ml-30 mt-15 mb-50">
         <ul>
           <li>
-              {% if 'Agora' in partnerData.title %}
+              {% if 'Agora' in title %}
                 {% if not collections.show_availability[0].data.agora_goddam %}
-                  <a href="{{partnerData.buyButton_1}}">
+                  <a href="{{buyButton_1}}">
                   {% if page.url == '/en/' %}
                   Buy now
                   {% else %}
                   Acheter maintenant 
                   {% endif %}
                 {% else %}
-                  <a href="{{partnerData.buyButton_1}}" class="disabled-2">
+                  <a href="{{buyButton_1}}" class="disabled-2">
                   {% if page.url == '/en/' %}
                   Sold out
                   {% else %}
                   Complet
                   {% endif %}
                 {% endif %}
-              {% elif 'Danse Danse' in partnerData.title %}
+              {% elif 'Danse Danse' in title %}
                 {% if not collections.show_availability[0].data.reckless %}
-                  <a href="{{partnerData.buyButton_1}}">
+                  <a href="{{buyButton_1}}">
                   {% if page.url == '/en/' %}
                   Buy now
                   {% else %}
                   Acheter maintenant 
                   {% endif %}
                 {% else %}
-                  <a href="{{partnerData.buyButton_1}}" class="disabled-2">
+                  <a href="{{buyButton_1}}" class="disabled-2">
                   {% if page.url == '/en/' %}
                   Sold out
                   {% else %}
                   Complet
                   {% endif %}
                 {% endif %}
-              {% elif 'La Rotonde' in partnerData.title %}
+              {% elif 'La Rotonde' in title %}
                 {% if not collections.show_availability[0].data.rotonde_efer %}
-                  <a href="{{partnerData.buyButton_1}}">
+                  <a href="{{buyButton_1}}">
                   {% if page.url == '/en/' %}
                   Buy now
                   {% else %}
                   Acheter maintenant 
                   {% endif %}
                 {% else %}
-                  <a href="{{partnerData.buyButton_1}}" class="disabled-2">
+                  <a href="{{buyButton_1}}" class="disabled-2">
                   {% if page.url == '/en/' %}
                   Sold out
                   {% else %}
                   Complet
                   {% endif %}
                 {% endif %}
-              {% elif 'Tangente' in partnerData.title %}
+              {% elif 'Tangente' in title %}
                 {% if not collections.show_availability[0].data.tangente_100lux %}
-                  <a href="{{partnerData.buyButton_1}}">
+                  <a href="{{buyButton_1}}">
                   {% if page.url == '/en/' %}
                   Buy now
                   {% else %}
                   Acheter maintenant 
                   {% endif %}
                 {% else %}
-                  <a href="{{partnerData.buyButton_1}}" class="disabled-2">
+                  <a href="{{buyButton_1}}" class="disabled-2">
                   {% if page.url == '/en/' %}
                   Sold out
                   {% else %}
@@ -297,7 +347,7 @@
               <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2134 1.81351H11.1373V0.625H15.4307H16.027V1.21926V5.4979H14.8344V2.86494L10.5939 6.87955L9.77246 6.01787L14.2134 1.81351Z" fill="#696969"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9.94023 0.625H1.56232C0.699474 0.625 0 1.3202 0 2.17778V3.13328C0 3.46314 0.269054 3.73056 0.60095 3.73056C1.78361 3.73056 2.77984 4.72566 2.77984 6C2.77984 7.27434 1.78361 8.26944 0.60095 8.26944C0.269054 8.26944 0 8.625 0 8.86672V9.82222C0 10.6798 0.699474 11.375 1.56232 11.375H14.465C15.3278 11.375 16.0273 10.6798 16.0273 9.82222V6.79167H14.8255V9.82222C14.8255 10.0201 14.6641 10.1806 14.465 10.1806H1.56232C1.3632 10.1806 1.20178 10.0201 1.20178 9.82222V9.40967C2.79598 9.11802 3.98162 7.68619 3.98162 6C3.98162 4.31381 2.79598 2.88198 1.20178 2.59034V2.17778C1.20178 1.97988 1.3632 1.81944 1.56232 1.81944H9.94023V0.625Z" fill="#696969"/>
               </svg></a>
-            <a href="{{partnerData.infoButton_1}}">
+            <a href="{{infoButton_1}}">
               {% if page.url == '/en/' %}
                 More info
               {% else %}
@@ -314,10 +364,10 @@
   </div>
   <div class="col-50 flex sticky height-vh-100">
     <picture>
-      {% if partnerData.webp_image_1 %}
-      <source srcset="{{partnerData.webp_image_1}}" type="image/webp">
+      {% if webp_image_1 %}
+      <source srcset="{{webp_image_1}}" type="image/webp">
       {% endif %}
-      <img src="{{partnerData.fallback_image_1}}" width="1200" height="1800" loading="lazy" decoding="async">
+      <img src="{{fallback_image_1}}" width="1200" height="1800" loading="lazy" decoding="async">
     </picture>
   </div>
 </div>
