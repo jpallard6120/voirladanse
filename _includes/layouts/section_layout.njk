@@ -75,8 +75,8 @@
           </summary>
           <div class="relative">
             <p class="credit-details w-100 show-content pb-15 pr-150">
-              {% for credit in credits %}
-                {{partnerData.credit | safe}}<br>
+              {% for credit in partnerData.credits %}
+                {{credit | safe}}<br>
               {% endfor %}
               </p>
             <div class="absolute bottom-10 right-10 credits-logo">
@@ -205,8 +205,8 @@
           </summary>
           <div class="relative">
             <p class="credit-details w-100 show-content pb-15 pr-150">
-              {%for credit_1 in credits_1 %}
-                {{partnerData.credit_1}}<br>
+              {%for credit_1 in partnerData.credits_1 %}
+                {{credit_1 | safe}}<br>
               {% endfor %}
             </p>
             <div class="absolute bottom-10 right-10 credits-logo">
